@@ -1,0 +1,72 @@
+.slideShow{
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    background-color: blue;
+    height: 100%;
+    top: 100px;
+}
+
+.backgroundSlide{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 607px;
+    
+}
+
+.movimentoSlide{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1220px;
+    height: 607px;
+    display: grid;
+    grid-template-columns: 30px 1160px 30px;
+    align-items: center;
+    justify-items: center;
+    color: white;
+}
+
+.espacoSlide{
+    background-color: black;
+    width: 1160px;
+    height: 607px;    
+    display: grid;
+    grid-template-columns: 610px 610px;
+    grid-template-rows: auto auto auto;
+    color: white;
+    justify-items: center;
+    align-items: center;
+}
+
+.item3DoGrid{
+    padding-left: 9%;
+}
+
+.item6DoGrid{
+    width: 50%;
+    height: 100%;
+    align-items: start;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+}
+
+.botaoParteExterna{
+    display: flex;
+    height: 84px;
+    width: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+.iconSlide{
+    width: 100%;
+    height: 100%;
+    color: #303030;
+    transition: 0.3s;
+}
+.iconSlide:hover{
+    color: white;
+}

@@ -1,0 +1,26 @@
+.delimitacaoCabecalho{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: #206597;
+}
+
+.cabecalho{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);    
+    width: 1220px;
+    display: grid;
+    grid-template-columns: auto 50% auto;
+    grid-template-rows: 100px;
+}
+
+.logo{
+    position: relative;
+    border-radius: 15px;
+    background-color: #578bb1;
+    height: 67px;
+    width: 67px;
+
+    align-self: center;
+}

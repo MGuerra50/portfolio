@@ -1,0 +1,17 @@
+.delimitacaoRodape{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: #303030;
+}
+
+.rodape{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);    
+    width: 1220px;
+    display: grid;
+    grid-template-columns: auto 50% auto;
+    grid-template-rows: 100px;
+}
+
