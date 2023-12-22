@@ -1,11 +1,20 @@
+import Slides from '../../componentes/Slides';
 import styles from './Inicial.module.css';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
+import imagem1 from '../../imagensTeste/1.png';
+import imagem2 from '../../imagensTeste/2.png';
+import imagem3 from '../../imagensTeste/3.png';
+
 export default function Inicial () {
+
+    const testeSlide = [imagem1, imagem2, imagem3];
+
     return (
         <div className={styles.slideShow}>
 
             
+            <Slides imagens={testeSlide}/>
 
             <div className={styles.backgroundSlide}>
                 <span className={styles.movimentoSlide}>

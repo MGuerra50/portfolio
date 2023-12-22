@@ -1,0 +1,38 @@
+.slideShow{
+    position: absolute;
+    width: 1220px;
+    height: 607px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slides input{
+    display: none;
+    width: 20%;
+    transition: 2s;
+}
+
+.elementoSlide img{
+
+}
+
+.navegacaoManual{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.navegacaoManual label{
+    border: 2px solid #109AFF;
+    padding: 5%;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.navegacaoManual:not(:last-child){
+    margin-right: 40px;
+}
