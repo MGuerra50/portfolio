@@ -18,7 +18,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 1220px;
-    height: 607px;
+    height: 607px; 
     display: grid;
     grid-template-columns: 30px 1160px 30px;
     align-items: center;
@@ -28,7 +28,7 @@
 
 .espacoSlide{
     width: 1160px;
-    height: 607px;    
+    height: 607px;
     display: grid;
     grid-template-columns: 610px 610px;
     grid-template-rows: auto auto auto;
