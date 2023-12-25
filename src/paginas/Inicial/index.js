@@ -1,54 +1,58 @@
 import Slides from '../../componentes/Slides';
 import styles from './Inicial.module.css';
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+/*import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";*/
 
 import imagem1 from '../../imagensTeste/1.png';
 import imagem2 from '../../imagensTeste/2.png';
 import imagem3 from '../../imagensTeste/3.png';
+import Resumo from '../../componentes/Resumo';
 
 export default function Inicial () {
 
     const testeSlide = [imagem1, imagem2, imagem3];
+    const conhecimentos = ['React', 'NodeJs', 'PostgreSQL', 'MER', 'HTML', 'CSS'];
 
     return (
-        <div className={styles.slideShow}>
+        <>
+            <div className={styles.slideShow}>
 
-            
-            <Slides imagens={testeSlide}/>
+                <Slides imagens={testeSlide}/>
 
-            <div className={styles.backgroundSlide}>
-                <span className={styles.movimentoSlide}>
-                
-                    <div className={styles.botaoParteExterna}>
-                        <IoIosArrowBack className={styles.iconSlide}/>
-                    </div>
-                
-                    <span className={styles.espacoSlide}>
-                        <div></div>
-                        <div></div>
-                        <div className={styles.item3DoGrid}>
-                            <h1>
-                                Olá, me chamo  Matheus
-                            </h1>
-                            <h3>
-                                Graduando em Engenharia de Computação, e programador full-stack
-                            </h3>
+                <div className={styles.backgroundSlide}>
+                    <span className={styles.movimentoSlide}>
+                    
+                        <div className={styles.botaoParteExterna}>
+                            {/*<IoIosArrowBack className={styles.iconSlide}/>*/}
                         </div>
-                        <div></div>
-                        <div></div>
-                        <div className={styles.item6DoGrid}>
-                            <h3>Ver</h3>
-                            <h3>Conteúdo</h3>
+                    
+                        <span className={styles.espacoSlide}>
+                            <div className={styles.item3DoGrid}></div>
+                            <div></div>
+                            <div className={styles.item3DoGrid}>
+                                <h1 className={styles.textoSlide}>
+                                    Olá, me chamo  Matheus
+                                </h1>
+                                <h3 className={styles.textoSlide}>
+                                    Programador full-stack, e graduando em Engenharia de Computação 
+                                </h3>
+                            </div>
+                            <div></div>
+                            <div className={styles.item3DoGrid}></div>
+                            <div className={styles.item6DoGrid}>
+                                <div><h3>Ver</h3></div>
+                                <div><h3>Conteúdo</h3></div>
+                            </div>
+                        </span>
+                    
+                        <div className={styles.botaoParteExterna}>
+                            {/*<IoIosArrowForward className={styles.iconSlide}/>*/}
                         </div>
                     </span>
-                
-                    <div className={styles.botaoParteExterna}>
-                        <IoIosArrowForward className={styles.iconSlide}/>
-                    </div>
-                    
-                
-                </span>
+                </div>
             </div>
-        </div>
+            <Resumo conhecimentos = {conhecimentos}/>
+        
+        </>
+        
     );
 }

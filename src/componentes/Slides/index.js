@@ -36,14 +36,13 @@ export default function Slides ({ imagens, tempo = 5 }) {
         return (
         <div className={styles.slideShow}>
 
-            {imagens.map((imagemAtual, index)=>{
-                    
+            {imagens.map((imagemAtual, index)=>{        
                 return (
                     <div key={index} style={verificaEstilo(index, slideAtual)} className={styles.elementoSlide}>
                         <img src={imagemAtual} alt={`slide ${index+1}`}/>
                     </div>);
                 }
-                )}
+            )}
 
         </div>
     );
