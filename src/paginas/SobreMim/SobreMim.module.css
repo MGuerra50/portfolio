@@ -1,0 +1,14 @@
+.sobreMim{
+    position: relative;
+    width: 1220px;
+    height: 607px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 49% 51%;
+}
+
+.apresentacao{
+    background-color: #f0f0f0;
+}

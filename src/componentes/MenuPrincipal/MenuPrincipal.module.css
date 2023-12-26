@@ -1,0 +1,11 @@
+.menuPrincipal{
+    display: flex;
+}
+
+.item{
+    width: 100%;
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-wrap: nowrap;
+}

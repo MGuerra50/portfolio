@@ -10,10 +10,10 @@ function verificaEstilo (index, slideAtual){
     }
 }
 
-export default function Slides ({ imagens, tempo = 5, largura = '1220px', altura = '607px' }) {  
+export default function Slides ({ imagens, passagemSlides = 100, tempo = 5, largura = '1220px', altura = '607px' }) {  
    
     const [slideAtual, setSlideAtual] = useState(0);
-    const movimentoMaxSlide = (imagens.length * 100) - 100;
+    const movimentoMaxSlide = (imagens.length * passagemSlides) - passagemSlides;
 
     useEffect(()=>{
         const intervaloSlides = setInterval(()=>{
@@ -21,13 +21,13 @@ export default function Slides ({ imagens, tempo = 5, largura = '1220px', altura
             if(slideAtual === movimentoMaxSlide){
                 setSlideAtual(()=>0);
             } else {
-                setSlideAtual(()=>slideAtual + 100);
+                setSlideAtual(()=>slideAtual + passagemSlides);
             }
 
         }, tempo*1000);
 
         return() => clearInterval(intervaloSlides);
-    }, [movimentoMaxSlide, slideAtual, tempo]);
+    }, [movimentoMaxSlide, passagemSlides, slideAtual, tempo]);
     
     if (!imagens || imagens.length === 0) {
         return <div>Nenhuma imagem disponível.</div>;

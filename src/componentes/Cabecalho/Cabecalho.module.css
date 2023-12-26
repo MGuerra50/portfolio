@@ -11,7 +11,7 @@
     transform: translateX(-50%);    
     width: 1220px;
     display: grid;
-    grid-template-columns: auto 50% auto;
+    grid-template-columns: 25% 50% 25%;
     grid-template-rows: 100px;
 }
 
@@ -21,6 +21,10 @@
     background-color: #578bb1;
     height: 67px;
     width: 67px;
-
     align-self: center;
+}
+
+.menuPrincipal{
+    transform: translateY(30%);
+    justify-content: center;
 }

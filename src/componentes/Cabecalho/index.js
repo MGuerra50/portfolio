@@ -1,3 +1,4 @@
+import MenuPrincipal from '../MenuPrincipal';
 import styles from './Cabecalho.module.css';
 
 export default function Cabecalho () {
@@ -6,10 +7,12 @@ export default function Cabecalho () {
             
             <div className={styles.cabecalho}>
 
-                <div className={styles.logo}>
-
+                <div className={styles.logo}></div>
+                
+                <div className={styles.menuPrincipal}>
+                    <MenuPrincipal cor='#ffffff'/>
                 </div>
-            
+
             </div>
 
         </div>

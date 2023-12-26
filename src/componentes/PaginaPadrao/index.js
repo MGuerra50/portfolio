@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Cabecalho from "../Cabecalho";
+import Rodape from "../Rodape";
 
 export default function PaginaPadrao () {
     return (
@@ -8,6 +9,7 @@ export default function PaginaPadrao () {
 
             <Outlet/>
 
+            <Rodape/>
         </main>
     );
 }

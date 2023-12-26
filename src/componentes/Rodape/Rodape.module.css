@@ -1,17 +1,26 @@
 .delimitacaoRodape{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100px;
-    background-color: #303030;
+    background-color: #ffffff;
 }
 
 .rodape{
-    position: absolute;
+    margin: 0;
+    border-top: 3px solid #109AFF;
+    border-radius: 5%;
+    margin-top: 15%;
+    padding-top: 1.5%;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);    
     width: 1220px;
     display: grid;
-    grid-template-columns: auto 50% auto;
-    grid-template-rows: 100px;
+    grid-template-columns: 50%;
+    justify-content: center;
 }
 
+.desenvolvido{
+    margin-top: 7%;
+    justify-self: center;
+}
