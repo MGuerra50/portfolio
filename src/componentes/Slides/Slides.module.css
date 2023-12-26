@@ -1,7 +1,7 @@
 .slideShow{
     position: absolute;
-    width: 1220px;
-    height: 607px;
+    /*width: 1220px;
+    height: 607px;*/
     display: flex;
     left: 50%;
     transform: translateX(-50%);

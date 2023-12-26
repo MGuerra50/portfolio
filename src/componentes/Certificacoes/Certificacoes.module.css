@@ -1,0 +1,61 @@
+.espacoCertificacoes{
+    position: relative;
+    top: 100px;
+    width: 1220px;
+    height: 607px;
+    background-color: #fff;
+    box-shadow: 0px 12px 10px 5px rgba(0, 0, 0, 0.1);
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.backgroundDivisao{
+    height: 100%;
+    width: 50%;
+    background-color:/* rgba(49,49,49,1)*/ #fff;
+}
+
+.circulo{
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    border-radius: 100%;
+    background-color:/*#313131*/ #ffffff;
+    border: 15px solid #109AFF;
+    overflow-y: visible;
+    left: -17%;
+    top: -10%;
+}
+
+.titulo{
+    margin: 0;
+    padding-top: 69px;
+    padding-bottom: 69px;
+    padding-left: 224px;
+    color: /*#fff*/#313131;
+}
+
+.quadrado{
+    position: absolute;
+    width: 293px;
+    height: 293px;
+    background-color: #ffffff;
+    border: 15px solid #109AFF;
+    transform: rotate(-5deg);
+    overflow: hidden;
+    right: -3%;
+    bottom: 5%;
+}
+
+.teste{
+    position: relative;
+    width: 160%;
+    height: 75%;
+    background-color: red;
+    display: block;
+    left: 21%;
+    top: -10%;
+    z-index: 1;
+}

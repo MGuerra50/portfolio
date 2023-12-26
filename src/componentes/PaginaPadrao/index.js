@@ -7,6 +7,7 @@ export default function PaginaPadrao () {
             <Cabecalho/>
 
             <Outlet/>
+
         </main>
     );
 }

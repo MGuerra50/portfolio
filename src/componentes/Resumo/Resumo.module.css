@@ -3,7 +3,7 @@
     top: 100px;
     width: 100%;
     height: 700px;
-    background: rgba(240,240,240,1);
+    background: rgb(255, 255, 255, 1);
 }
 
 .background{
@@ -71,4 +71,8 @@
     margin-left: 5%;
     margin-top: 1%;
     font-size: 18px;
+}
+
+.botaoSobreMim{
+    margin-left: 55%;
 }

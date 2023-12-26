@@ -6,6 +6,8 @@ import imagem1 from '../../imagensTeste/1.png';
 import imagem2 from '../../imagensTeste/2.png';
 import imagem3 from '../../imagensTeste/3.png';
 import Resumo from '../../componentes/Resumo';
+import BotaoPadrao from '../../componentes/BotaoPadrao';
+import Certificacoes from '../../componentes/Certificacoes';
 
 export default function Inicial () {
 
@@ -39,8 +41,8 @@ export default function Inicial () {
                             <div></div>
                             <div className={styles.item3DoGrid}></div>
                             <div className={styles.item6DoGrid}>
-                                <div><h3>Ver</h3></div>
-                                <div><h3>Conteúdo</h3></div>
+                                <BotaoPadrao texto='Ver'/>
+                                <BotaoPadrao texto='Contato'/>
                             </div>
                         </span>
                     
@@ -51,6 +53,7 @@ export default function Inicial () {
                 </div>
             </div>
             <Resumo conhecimentos = {conhecimentos}/>
+            <Certificacoes/>
         
         </>
         

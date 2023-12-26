@@ -10,7 +10,7 @@ function verificaEstilo (index, slideAtual){
     }
 }
 
-export default function Slides ({ imagens, tempo = 5 }) {  
+export default function Slides ({ imagens, tempo = 5, largura = '1220px', altura = '607px' }) {  
    
     const [slideAtual, setSlideAtual] = useState(0);
     const movimentoMaxSlide = (imagens.length * 100) - 100;
@@ -34,7 +34,7 @@ export default function Slides ({ imagens, tempo = 5 }) {
       }      
 
         return (
-        <div className={styles.slideShow}>
+        <div style={{width: largura, height: altura}} className={styles.slideShow}>
 
             {imagens.map((imagemAtual, index)=>{        
                 return (

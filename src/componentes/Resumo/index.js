@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './Resumo.module.css';
 import imagem from './fotoResumo.jpeg';
+import BotaoPadrao from '../BotaoPadrao';
 
 export default function Resumo ({ conhecimentos }) {
     return(
@@ -19,7 +20,10 @@ export default function Resumo ({ conhecimentos }) {
                         <p className={styles.textoPadrao} style={{fontWeight: 500}}>Experiência em vários projetos pessoais, vide <Link className={styles.link}>portfólio</Link></p>
                         <li className={styles.textoPadrao}>Graduando em Engenharia de Computação</li>
                         <li className={styles.textoPadrao}>Programador full-stack</li>
-                        {conhecimentos.map((itemLista) => <li className={styles.listaConhecimentos}>{itemLista}</li> )}
+                        {conhecimentos.map((itemLista, index) => <li key={index} className={styles.listaConhecimentos}>{itemLista}</li> )}
+                        <div className={styles.botaoSobreMim}> 
+                            <BotaoPadrao className={styles.botaoSobreMim} texto='Sobre mim'/>
+                        </div>
                     </div>
                 </div>
             </div>
