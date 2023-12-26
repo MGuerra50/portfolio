@@ -6,9 +6,48 @@
     left: 50%;
     transform: translateX(-50%);
     display: grid;
-    grid-template-columns: 49% 51%;
+    grid-template-columns: 42% 58%;
 }
 
 .apresentacao{
     background-color: #f0f0f0;
+}
+
+.divImagem{
+    position: relative;
+    width: 46%;
+    height: 46%;
+    border-radius: 100%;
+    left: 50%;
+    transform: translateX(-52%);
+}
+
+.destaque{
+    position: relative;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+}
+
+.habilidades{
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+.imagem{
+    width: 100%;
+    border-radius: 100%;
+    border: 20px solid #ffffff;
+}
+
+.texto{
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 5%;
 }
