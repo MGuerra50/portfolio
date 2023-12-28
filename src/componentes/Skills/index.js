@@ -1,28 +1,7 @@
 import styles from './Skills.module.css';
+import BotaoPadrao from '../../componentes/BotaoPadrao';
 
 export default function Skills ({ conhecimentos }){
-
-    const gerandoTabela = (tecnologia)=>{/*Fazer o GRID Aqui dentro da FUNÇÃO!*/
-    let trocandoColuna = 0;
-        for(let i = 0; i <= 1; i++){
-            if(trocandoColuna === 0){
-                return(
-                    <>
-                        <h3 style={{marginBottom: 1+'%'}}>{tecnologia.nome}</h3>
-                        <div className={styles.barraExterna}>
-                            <div style={{width: tecnologia.valor+'%', backgroundColor: `${tecnologia.cor}`}} className={styles.barraInterna}/>
-                        </div>
-                    </>
-                );
-            } else {
-                return(
-                    <div>
-                        {tecnologia.icon}
-                    </div>
-                );
-            }
-        }
-    }
 
     return (
         <div className={styles.skills}>
@@ -52,24 +31,27 @@ export default function Skills ({ conhecimentos }){
             <div className={styles.lado2Div}>
                 <h1 className={styles.titulo}>Tecnologias</h1>
                 
-                <div className={styles.tabelaConhecimentos}>
+                <div className={styles.listaCompleta}>
                     {conhecimentos.map((tecnologia)=>{
                         return(
                             <div className={styles.itemLista}>
-                                {gerandoTabela(tecnologia)}
+                                <div>
+                                    <h3 style={{marginBottom: 1+'%'}}>{tecnologia.nome}</h3>
+                                    <div className={styles.barraExterna}>
+                                        <div style={{width: tecnologia.valor+'%', backgroundColor: `${tecnologia.cor}`}} className={styles.barraInterna}/>
+                                    </div>
+                                </div>
+                                <div className={styles.icone}>
+                                        {tecnologia.icon}
+                                </div>
                             </div>
                         );
                     })}
                 </div>
-                
+                <div className={styles.botao}>
+                    <BotaoPadrao texto='Veja o Portfólio'/>
+                </div>
             </div>
         </div>
     );
 }
-{/*
-                <h3 style={{marginBottom: 1+'%'}}>{tecnologia.nome}</h3>
-                            <div className={styles.barraExterna}>
-                                <div style={{width: tecnologia.valor+'%', backgroundColor: `${tecnologia.cor}`}} className={styles.barraInterna}/>
-                                {tecnologia.icon}
-                            </div>
-*/}

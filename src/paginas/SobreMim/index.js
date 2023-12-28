@@ -15,33 +15,33 @@ export default function SobreMim () {
             nome: 'React',
             valor: 90,
             cor: '#5ED3F3',
-            icon: <FaReact />
+            icon: <FaReact style={{color: '#5ED3F3'}} className={styles.icones}/>
         },
         {
             nome: 'NodeJs',
             valor: 93,
             cor: '#7CB73F',
-            icon: <IoLogoNodejs />
+            icon: <IoLogoNodejs style={{color: '#7CB73F'}} className={styles.icones}/>
         },{
             nome: 'PostgreSQL',
             valor: 80,
             cor: '#2F5E8D',
-            icon: <BiLogoPostgresql />
+            icon: <BiLogoPostgresql style={{color: '#2F5E8D'}} className={styles.icones}/>
         },{
             nome: 'MER',
             valor: 90,
             cor: '#000000',
-            icon: <FaProjectDiagram />
+            icon: <FaProjectDiagram style={{color: '#000000'}} className={styles.icones}/>
         },{
             nome: 'HTML',
             valor: 78,
             cor: '#DD4B25',
-            icon: <IoLogoHtml5 />
+            icon: <IoLogoHtml5 style={{color: '#DD4B25'}} className={styles.icones}/>
         },{
             nome: 'CSS',
             valor: 75,
             cor: '#254BDD',
-            icon: <IoLogoCss3 />
+            icon: <IoLogoCss3 style={{color: '#254BDD'}} className={styles.icones}/>
         }
     ];
 

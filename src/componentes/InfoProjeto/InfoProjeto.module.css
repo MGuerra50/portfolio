@@ -1,0 +1,31 @@
+.titulo{
+    position: relative;
+    margin: 0;
+    top: 100px;
+    color: blue;
+}
+
+.tabelas{
+    position: relative;
+    top: 100px;
+    width: 1220px;
+    height: 768px;
+    display: grid;
+    grid-template-columns: 452px 768px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.espacoTextos{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: beige;
+}
+
+.espacoImagem{
+    width: 100%;
+    height: auto;
+    background-color: #fafafa;
+}
