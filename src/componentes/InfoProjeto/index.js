@@ -1,6 +1,14 @@
 import styles from './InfoProjeto.module.css';
+import BotaoPadrao from '../BotaoPadrao';
+import Slides from '../Slides';
+import imagem1 from '../../imagensTeste/1.png';
+import imagem2 from '../../imagensTeste/2.png';
+import imagem3 from '../../imagensTeste/3.png';
 
-export default function InfoProjeto () {
+export default function InfoProjeto ({ projetoNome='Jogo Da Velha' }) {
+
+    const slidesTeste = [imagem1, imagem2, imagem3]
+
     return(
         <div className={styles.tabelas}>
             <div className={styles.espacoTextos}>
@@ -12,7 +20,12 @@ export default function InfoProjeto () {
                 </div>
             </div>
             <div className={styles.espacoImagem}>
-                {/*<img/>*/}
+                <div className={styles.slideQuadrado}>
+                    <Slides imagens={slidesTeste}/>
+                </div>
+                <div className={styles.botao}>
+                    <BotaoPadrao texto='Contato'/>
+                </div>
             </div>
         </div>
     );

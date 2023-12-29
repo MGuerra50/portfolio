@@ -9,7 +9,7 @@
     position: relative;
     top: 100px;
     width: 1220px;
-    height: 768px;
+    height: 607px; /*768px*/
     display: grid;
     grid-template-columns: 452px 768px;
     left: 50%;
@@ -28,4 +28,25 @@
     width: 100%;
     height: auto;
     background-color: #fafafa;
+    overflow-x: hidden;
+    display: flex;
+}
+
+.slideQuadrado{
+    position: relative;
+    width: 768px;
+    height: auto;
+    right: -50%;
+    transform: translateX(-50%);
+    background-color: red;
+}
+
+.botao{
+    position: relative;
+    height: auto;
+    width: auto;
+    align-self: flex-end;
+    z-index: 1;
+    margin-bottom: 10%;
+    margin-right: 10%;
 }
