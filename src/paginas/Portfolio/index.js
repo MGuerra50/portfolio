@@ -13,6 +13,7 @@ import imagem9 from '../../componentes/ImagensGamesTeste/9.png';
 import imagem10 from '../../componentes/ImagensGamesTeste/10.png';
 import imagem11 from '../../componentes/ImagensGamesTeste/11.png';
 import imagem12 from '../../componentes/ImagensGamesTeste/12.png';
+import { useState } from 'react';
 
 export default function Portfolio () {
 
@@ -56,12 +57,35 @@ export default function Portfolio () {
         }
     ];
 
+    const [posicaoCarrossel, setPosicaoCarrossel] = useState(0);
+    let orientacaoPosicao = 0;
     function verificandoEstilo (index, posicaoProjeto){
         /* zIndex: -1 em um momento em que o elemento já tenha obrigatóriamente saido da tela, pois some da vizão */
+
         if(index === 0){
-            return {marginRight: - posicaoProjeto + '%', backgroundImage: `url(${posicaoProjeto.imagem})`}
+            return {marginRight: - posicaoCarrossel + 'px', backgroundImage: `url(${posicaoProjeto.imagem})`, zIndex: 0}
         } else {
-            return {marginRight: 0, backgroundImage: `url(${posicaoProjeto.imagem})`}
+            return {marginRight: 0, backgroundImage: `url(${posicaoProjeto.imagem})`, zIndex: 1}
+        }
+    }
+
+    function passagemCarrossel (sentido){
+        if(sentido === '+'){
+            let verificador = ((listaProjetos.length*225)/5)-orientacaoPosicao;
+            if(verificador > 1){
+                const passagemCarrossel = posicaoCarrossel + (225*5);
+                setPosicaoCarrossel(() => passagemCarrossel);
+                orientacaoPosicao+=1;
+            } else {
+                let scrollMaximo = (5*verificador)/1;
+                const passagemCarrossel = posicaoCarrossel + (225*scrollMaximo);
+                setPosicaoCarrossel(() => passagemCarrossel);
+                orientacaoPosicao+=1;
+            }
+        } else if(sentido === '-' && posicaoCarrossel > 0){
+            orientacaoPosicao-=1;
+            const passagemCarrossel = posicaoCarrossel - (225*5);
+            setPosicaoCarrossel(() => passagemCarrossel);
         }
     }
 
@@ -71,7 +95,7 @@ export default function Portfolio () {
                 <h1 className={styles.titulo}>Meus projetos</h1>
                 <div className={styles.carrossel}>
                     <div className={styles.botao}>
-                        <IoIosArrowBack className={styles.iconeBotao}/>
+                        <IoIosArrowBack onClick={()=>passagemCarrossel('-')} className={styles.iconeBotao}/>
                     </div>
                     <div className={styles.itensCarrossel}>
                         {listaProjetos.map((projeto, index)=>{
@@ -85,7 +109,7 @@ export default function Portfolio () {
                         })}
                     </div>
                     <div className={styles.botao}>
-                        <IoIosArrowForward className={styles.iconeBotao}/>
+                        <IoIosArrowForward onClick={()=>passagemCarrossel('+')} className={styles.iconeBotao}/>
                     </div>
                 </div>
             </div>
