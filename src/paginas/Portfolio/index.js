@@ -15,6 +15,8 @@ import imagem11 from '../../componentes/ImagensGamesTeste/11.png';
 import imagem12 from '../../componentes/ImagensGamesTeste/12.png';
 import { useState } from 'react';
 
+let orientacaoPosicao = 5;
+
 export default function Portfolio () {
 
     const listaProjetos = [
@@ -58,7 +60,7 @@ export default function Portfolio () {
     ];
 
     const [posicaoCarrossel, setPosicaoCarrossel] = useState(0);
-    let orientacaoPosicao = 0;
+    
     function verificandoEstilo (index, posicaoProjeto){
         /* zIndex: -1 em um momento em que o elemento já tenha obrigatóriamente saido da tela, pois some da vizão */
 
@@ -70,20 +72,20 @@ export default function Portfolio () {
     }
 
     function passagemCarrossel (sentido){
+        let verificador = ((((listaProjetos.length*225)/(5*225))*5)/1)-orientacaoPosicao;
         if(sentido === '+'){
-            let verificador = ((listaProjetos.length*225)/5)-orientacaoPosicao;
-            if(verificador > 1){
+            orientacaoPosicao = verificador > 0 ? (orientacaoPosicao+= verificador > 5 ? 5 : verificador) : orientacaoPosicao;
+            if(verificador >= 5){
                 const passagemCarrossel = posicaoCarrossel + (225*5);
                 setPosicaoCarrossel(() => passagemCarrossel);
-                orientacaoPosicao+=1;
-            } else {
-                let scrollMaximo = (5*verificador)/1;
-                const passagemCarrossel = posicaoCarrossel + (225*scrollMaximo);
+            } else if(verificador < 5 && verificador > 0){
+                const passagemCarrossel = posicaoCarrossel + (225*verificador);
                 setPosicaoCarrossel(() => passagemCarrossel);
-                orientacaoPosicao+=1;
             }
         } else if(sentido === '-' && posicaoCarrossel > 0){
-            orientacaoPosicao-=1;
+            console.log('Verificador: '+ verificador);
+            console.log('Orientação Posição: '+orientacaoPosicao);
+            orientacaoPosicao-= verificador-5 > listaProjetos.length ? listaProjetos.length - verificador : verificador === listaProjetos.length ? 5 : 10;
             const passagemCarrossel = posicaoCarrossel - (225*5);
             setPosicaoCarrossel(() => passagemCarrossel);
         }
