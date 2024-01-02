@@ -83,10 +83,10 @@ export default function Portfolio () {
                 setPosicaoCarrossel(() => passagemCarrossel);
             }
         } else if(sentido === '-' && posicaoCarrossel > 0){
+            orientacaoPosicao= (verificador + 5) >= listaProjetos.length ? Math.abs(listaProjetos.length - (verificador)) : 5;
             console.log('Verificador: '+ verificador);
             console.log('Orientação Posição: '+orientacaoPosicao);
-            orientacaoPosicao-= verificador-5 > listaProjetos.length ? listaProjetos.length - verificador : verificador === listaProjetos.length ? 5 : 10;
-            const passagemCarrossel = posicaoCarrossel - (225*5);
+            const passagemCarrossel = posicaoCarrossel - (225*orientacaoPosicao);
             setPosicaoCarrossel(() => passagemCarrossel);
         }
     }
