@@ -56,6 +56,27 @@ export default function Portfolio () {
         },{
             nome: 'Página de Captura',
             imagem: imagem12
+        },{
+            nome: 'Página de Captura',
+            imagem: imagem12
+        },{
+            nome: 'SnowBall',
+            imagem: imagem8
+        },{
+            nome: 'IA',
+            imagem: imagem9
+        },{
+            nome: 'Saas',
+            imagem: imagem10
+        },{
+            nome: 'Criador de Temas WordPress',
+            imagem: imagem11
+        },{
+            nome: 'Página de Captura',
+            imagem: imagem12
+        },{
+            nome: 'Página de Captura',
+            imagem: imagem12
         }
     ];
 
@@ -74,22 +95,32 @@ export default function Portfolio () {
     function passagemCarrossel (sentido){
         orientacaoPosicao = sentido === '+' ? (orientacaoPosicao === 0 ? 5: orientacaoPosicao) : orientacaoPosicao;
         let verificador = ((((listaProjetos.length*225)/(5*225))*5)/1)-orientacaoPosicao;
-        console.log('Verificador: '+ verificador);
-        if(sentido === '+'){
+        console.log('Posição: '+ posicaoCarrossel);
+        if(sentido === '+'&& posicaoCarrossel < listaProjetos.length * 225){
             orientacaoPosicao = verificador > 0 ? (orientacaoPosicao+= verificador > 5 ? 5 : verificador) : orientacaoPosicao;
+            
             if(verificador >= 5){
-                const passagemCarrossel = posicaoCarrossel + (225*5);
+                orientacaoPosicao = orientacaoPosicao-5 === 0 ? orientacaoPosicao = 0 : orientacaoPosicao;
+                console.log('Aqui - OrientaçãoPosição: ' + orientacaoPosicao + '\n Verificador: ' + verificador)
+                let passagemCarrossel = posicaoCarrossel + (225*5);
+                passagemCarrossel = passagemCarrossel > 3150 ? 3150 : passagemCarrossel;
                 setPosicaoCarrossel(() => passagemCarrossel);
-            } else if(verificador < 5 && verificador > 0){
-                const passagemCarrossel = posicaoCarrossel + (225*verificador);
-                setPosicaoCarrossel(() => passagemCarrossel);
-            }
-        } else if(sentido === '-' && posicaoCarrossel > 0){
+            
+            } else if(verificador < 5 && verificador > 0 && (posicaoCarrossel + (225*verificador)) < (listaProjetos.length*225)){
+                let passagemCarrossel = Math.abs(posicaoCarrossel + (225*verificador));
+                console.log('AQUI!!! -> passagem carrossel:  '+passagemCarrossel + '\nLength: ' + listaProjetos.length);
+                if(passagemCarrossel < ((listaProjetos.length - 2 /* PORQUE 3? */) * 225)){
+                    passagemCarrossel = passagemCarrossel >= 3150 ? 3150 : passagemCarrossel;
+                    setPosicaoCarrossel(() => passagemCarrossel);
+                }
+            } 
+
+        } else if(sentido === '-' && posicaoCarrossel > 0 && posicaoCarrossel < listaProjetos.length * 225){
             orientacaoPosicao =  verificador > 0 ? (verificador > 5 ? verificador - 5 : (verificador >= listaProjetos.length ? 0 : 5)) : 5;
-            console.log('Orientação Posição: '+orientacaoPosicao);
-            const passagemCarrossel = posicaoCarrossel - (225*orientacaoPosicao);
-            setPosicaoCarrossel(() => passagemCarrossel);
-            orientacaoPosicao = orientacaoPosicao === 2 ? orientacaoPosicao = 0 : orientacaoPosicao;
+            console.log('Orientação Posição: '+orientacaoPosicao + '\n\bVerificador: ' + verificador);
+            const passagemCarrossel = posicaoCarrossel - (225*orientacaoPosicao <= 5 ? 225*orientacaoPosicao : 5*225);
+            setPosicaoCarrossel(() => passagemCarrossel > 0 ? passagemCarrossel : 0);
+            orientacaoPosicao = orientacaoPosicao < 5 ? orientacaoPosicao = 0 : orientacaoPosicao;
         }
     }
 
