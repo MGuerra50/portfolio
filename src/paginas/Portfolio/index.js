@@ -82,7 +82,7 @@ export default function Portfolio () {
 
     function verificandoEstilo(index, posicaoProjeto) {
         const marginRight = index === 0 ? -posicaoCarrossel : 0;
-        const marginLeft = index === 0 ? 20+'px' : 0;
+        const marginLeft = index === 0 ? 7+'px' : 0; 
         return { marginLeft, marginRight, backgroundImage: `url(${posicaoProjeto.imagem})`};
       }
 
