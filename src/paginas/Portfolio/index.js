@@ -15,8 +15,6 @@ import imagem11 from '../../componentes/ImagensGamesTeste/11.png';
 import imagem12 from '../../componentes/ImagensGamesTeste/12.png';
 import { useState } from 'react';
 
-let orientacaoPosicao = 5;
-
 export default function Portfolio () {
 
     const listaProjetos = [
@@ -81,48 +79,28 @@ export default function Portfolio () {
     ];
 
     const [posicaoCarrossel, setPosicaoCarrossel] = useState(0);
+
+    function verificandoEstilo(index, posicaoProjeto) {
+        const marginRight = index === 0 ? -posicaoCarrossel : 0;
+        const marginLeft = index === 0 ? 20+'px' : 0;
+        return { marginLeft, marginRight, backgroundImage: `url(${posicaoProjeto.imagem})`};
+      }
+
+    function passagemCarrossel(sentido) {
+        const itemsPerPage = 5;
+        const totalItems = listaProjetos.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
     
-    function verificandoEstilo (index, posicaoProjeto){
-        /* zIndex: -1 em um momento em que o elemento já tenha obrigatóriamente saido da tela, pois some da vizão */
-
-        if(index === 0){
-            return {marginRight: - posicaoCarrossel + 'px', backgroundImage: `url(${posicaoProjeto.imagem})`, zIndex: 0}
-        } else {
-            return {marginRight: 0, backgroundImage: `url(${posicaoProjeto.imagem})`, zIndex: 1}
+        let novaPosicaoCarrossel = posicaoCarrossel;
+    
+        if (sentido === '+' && posicaoCarrossel < (totalPages - 1) * itemsPerPage * 225) {
+          novaPosicaoCarrossel += itemsPerPage * 225;
+        } else if (sentido === '-' && posicaoCarrossel > 0) {
+          novaPosicaoCarrossel -= Math.min(itemsPerPage * 225, posicaoCarrossel);
         }
-    }
-
-    function passagemCarrossel (sentido){
-        orientacaoPosicao = sentido === '+' ? (orientacaoPosicao === 0 ? 5: orientacaoPosicao) : orientacaoPosicao;
-        let verificador = ((((listaProjetos.length*225)/(5*225))*5)/1)-orientacaoPosicao;
-        console.log('Posição: '+ posicaoCarrossel);
-        if(sentido === '+'&& posicaoCarrossel < listaProjetos.length * 225){
-            orientacaoPosicao = verificador > 0 ? (orientacaoPosicao+= verificador > 5 ? 5 : verificador) : orientacaoPosicao;
-            
-            if(verificador >= 5){
-                orientacaoPosicao = orientacaoPosicao-5 === 0 ? orientacaoPosicao = 0 : orientacaoPosicao;
-                console.log('Aqui - OrientaçãoPosição: ' + orientacaoPosicao + '\n Verificador: ' + verificador)
-                let passagemCarrossel = posicaoCarrossel + (225*5);
-                passagemCarrossel = passagemCarrossel > 3150 ? 3150 : passagemCarrossel;
-                setPosicaoCarrossel(() => passagemCarrossel);
-            
-            } else if(verificador < 5 && verificador > 0 && (posicaoCarrossel + (225*verificador)) < (listaProjetos.length*225)){
-                let passagemCarrossel = Math.abs(posicaoCarrossel + (225*verificador));
-                console.log('AQUI!!! -> passagem carrossel:  '+passagemCarrossel + '\nLength: ' + listaProjetos.length);
-                if(passagemCarrossel < ((listaProjetos.length - 2 /* PORQUE 3? */) * 225)){
-                    passagemCarrossel = passagemCarrossel >= 3150 ? 3150 : passagemCarrossel;
-                    setPosicaoCarrossel(() => passagemCarrossel);
-                }
-            } 
-
-        } else if(sentido === '-' && posicaoCarrossel > 0 && posicaoCarrossel < listaProjetos.length * 225){
-            orientacaoPosicao =  verificador > 0 ? (verificador > 5 ? verificador - 5 : (verificador >= listaProjetos.length ? 0 : 5)) : 5;
-            console.log('Orientação Posição: '+orientacaoPosicao + '\n\bVerificador: ' + verificador);
-            const passagemCarrossel = posicaoCarrossel - (225*orientacaoPosicao <= 5 ? 225*orientacaoPosicao : 5*225);
-            setPosicaoCarrossel(() => passagemCarrossel > 0 ? passagemCarrossel : 0);
-            orientacaoPosicao = orientacaoPosicao < 5 ? orientacaoPosicao = 0 : orientacaoPosicao;
-        }
-    }
+    
+        setPosicaoCarrossel(novaPosicaoCarrossel);
+      }
 
     return (
         <div>
