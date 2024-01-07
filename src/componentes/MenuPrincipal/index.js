@@ -11,7 +11,9 @@ export default function MenuPrincipal ({ cor = '#000000', tamanho = 2 }) {
     }
     return (
         <div className={styles.menuPrincipal}>
-            <h1 style={{fontSize: fonte, color: cor}} className={styles.item}>Home</h1>
+            <Link>
+                <h1 style={{fontSize: fonte, color: cor}} className={styles.item}>Home</h1>
+            </Link> 
             <h1 style={{fontSize: fonte, color: cor}} className={styles.item}>Portfólio</h1>
             <h1 style={{fontSize: fonte, color: cor}} className={styles.item}>Contato</h1>
             <h1 style={{fontSize: fonte, color: cor}} className={styles.item}>Sobre mim</h1>
