@@ -1,0 +1,16 @@
+.link{
+    text-decoration-line: none;
+    transition: 0.25s;
+}
+.link:hover{
+    transform: translateY(-2px);
+    text-shadow: 0px 0px 5px whitesmoke;
+}
+
+.realceLink{
+    text-shadow: 0px 0px 0.5px white, 0 0 1em white;
+    text-underline-offset: 7px;
+    color: white;
+    transform: translateY(-3px);
+    transition: 2s;
+}
