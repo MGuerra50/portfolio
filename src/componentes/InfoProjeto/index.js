@@ -14,6 +14,8 @@ import { IoLogoCss3 } from "react-icons/io5";
 
 export default function InfoProjeto ({ projetoNome='Jogo Da Velha' }) {
 
+    console.log(projetoNome)
+
     const slidesTeste = [imagem1, imagem2, imagem3];
     const projetos = [
         {
