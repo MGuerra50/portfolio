@@ -78,7 +78,7 @@ export default function Portfolio () {
         }
     ];
 
-    const [posicaoCarrossel, setPosicaoCarrossel] = useState('');
+    const [posicaoCarrossel, setPosicaoCarrossel] = useState(0);
 
     function verificandoEstilo(index, posicaoProjeto) {
         const marginRight = index === 0 ? -posicaoCarrossel : 0;
