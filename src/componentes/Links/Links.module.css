@@ -1,16 +1,21 @@
 .link{
     text-decoration-line: none;
-    transition: 0.25s;
+    color: transparent;
+    transition: 0.1s;
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .link:hover{
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     text-shadow: 0px 0px 5px whitesmoke;
 }
 
 .realceLink{
     text-shadow: 0px 0px 0.5px white, 0 0 1em white;
+    text-decoration: underline;
     text-underline-offset: 7px;
     color: white;
     transform: translateY(-3px);
-    transition: 2s;
+    transition: 0.5s;
 }

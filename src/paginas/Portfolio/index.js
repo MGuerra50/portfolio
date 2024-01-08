@@ -78,7 +78,7 @@ export default function Portfolio () {
         }
     ];
 
-    const [posicaoCarrossel, setPosicaoCarrossel] = useState(0);
+    const [posicaoCarrossel, setPosicaoCarrossel] = useState('');
 
     function verificandoEstilo(index, posicaoProjeto) {
         const marginRight = index === 0 ? -posicaoCarrossel : 0;
@@ -102,6 +102,12 @@ export default function Portfolio () {
         setPosicaoCarrossel(novaPosicaoCarrossel);
       }
 
+      const [trocandoInfoProjeto, setTrocandoInfoProjeto] = useState('Jogo Da Velha');
+
+      function trocaInfoProjeto (nomeProjeto){
+        setTrocandoInfoProjeto(()=>nomeProjeto);
+      }
+
     return (
         <div>
             <div className={styles.carrosselEspaco}>
@@ -114,7 +120,7 @@ export default function Portfolio () {
                         {listaProjetos.map((projeto, index)=>{
                             return(
                                 <div key={index} style={verificandoEstilo(index, projeto)} className={styles.espacoImagem}>
-                                    <div style={{width: '225px'}}>
+                                    <div onClick={()=>trocaInfoProjeto(projeto.nome)} style={{width: '225px'}}>
                                         <h2 className={styles.tituloProjeto}>{projeto.nome}</h2>
                                     </div>
                                 </div>
@@ -126,7 +132,7 @@ export default function Portfolio () {
                     </div>
                 </div>
             </div>
-            <InfoProjeto />
+            <InfoProjeto projetoNome={trocandoInfoProjeto}/>
         </div>
         
     )
