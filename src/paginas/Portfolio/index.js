@@ -106,7 +106,7 @@ export default function Portfolio () {
       const [trocandoInfoProjeto, setTrocandoInfoProjeto] = useState('Jogo Da Velha');
 
       function trocaInfoProjeto (nomeProjeto){
-        setTrocandoInfoProjeto(()=>nomeProjeto);
+        setTrocandoInfoProjeto(nomeProjeto);/* [ PROBLEMA DE re-renderização ] */
       }
 
     return (
