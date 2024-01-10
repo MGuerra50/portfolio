@@ -15,7 +15,7 @@ import imagem11 from '../../componentes/ImagensGamesTeste/11.png';
 import imagem12 from '../../componentes/ImagensGamesTeste/12.png';
 import { useState } from 'react';
 
-export default function Portfolio () {
+export default function Portfolio() {
 
     const listaProjetos = [
         {
@@ -24,55 +24,55 @@ export default function Portfolio () {
         }, {
             nome: 'Chat',
             imagem: imagem2
-        },{
-            nome: 'Site de Portfólio',
+        }, {
+            nome: 'Portfólio',
             imagem: imagem3
-        },{
+        }, {
             nome: 'E commerce',
             imagem: imagem4
-        },{
+        }, {
             nome: 'Xadrez',
             imagem: imagem5
-        },{
+        }, {
             nome: 'Página de Login',
             imagem: imagem6
-        },{
+        }, {
             nome: 'Criador de Mapas Mentais',
             imagem: imagem7
-        },{
+        }, {
             nome: 'SnowBall',
             imagem: imagem8
-        },{
+        }, {
             nome: 'IA',
             imagem: imagem9
-        },{
+        }, {
             nome: 'Saas',
             imagem: imagem10
-        },{
+        }, {
             nome: 'Criador de Temas WordPress',
             imagem: imagem11
-        },{
+        }, {
             nome: 'Página de Captura',
             imagem: imagem12
-        },{
-            nome: 'Página de Captura',
+        }, {
+            nome: 'Página de Vendas Profissional',
             imagem: imagem12
-        },{
+        }, {
             nome: 'SnowBall',
             imagem: imagem8
-        },{
+        }, {
             nome: 'IA',
             imagem: imagem9
-        },{
+        }, {
             nome: 'Saas',
             imagem: imagem10
-        },{
+        }, {
             nome: 'Criador de Temas WordPress',
             imagem: imagem11
-        },{
+        }, {
             nome: 'Página de Captura',
             imagem: imagem12
-        },{
+        }, {
             nome: 'Página de Captura',
             imagem: imagem12
         }
@@ -82,32 +82,31 @@ export default function Portfolio () {
 
     function verificandoEstilo(index, posicaoProjeto) {
         const marginRight = index === 0 ? -posicaoCarrossel : 0;
-        const marginLeft = index === 0 ? 7+'px' : 0; 
-        const zIndex = index === 0 && posicaoCarrossel >= (225*5) ? -1 : 'auto';
-        return { zIndex, marginLeft, marginRight, backgroundImage: `url(${posicaoProjeto.imagem})`};
-      }
+        const marginLeft = index === 0 ? 7 + 'px' : 0;
+        const zIndex = index === 0 && posicaoCarrossel >= (225 * 5) ? -1 : 'auto';
+        return { zIndex, marginLeft, marginRight, backgroundImage: `url(${posicaoProjeto.imagem})` };
+    }
 
     function passagemCarrossel(sentido) {
         const itemsPerPage = 5;
         const totalItems = listaProjetos.length;
         const totalPages = Math.ceil(totalItems / itemsPerPage);
-    
+
         let novaPosicaoCarrossel = posicaoCarrossel;
-    
+
         if (sentido === '+' && posicaoCarrossel < (totalPages - 1) * itemsPerPage * 225) {
-          novaPosicaoCarrossel += itemsPerPage * 225;
+            novaPosicaoCarrossel += itemsPerPage * 225;
         } else if (sentido === '-' && posicaoCarrossel > 0) {
-          novaPosicaoCarrossel -= Math.min(itemsPerPage * 225, posicaoCarrossel);
+            novaPosicaoCarrossel -= Math.min(itemsPerPage * 225, posicaoCarrossel);
         }
-    
+
         setPosicaoCarrossel(novaPosicaoCarrossel);
-      }
+    }
+    const [trocandoInfoProjeto, setTrocandoInfoProjeto] = useState('Jogo Da Velha');
 
-      const [trocandoInfoProjeto, setTrocandoInfoProjeto] = useState('Jogo Da Velha');
-
-      function trocaInfoProjeto (nomeProjeto){
+    function trocaInfoProjeto(nomeProjeto) {
         setTrocandoInfoProjeto(nomeProjeto);/* [ PROBLEMA DE re-renderização ] */
-      }
+    }
 
     return (
         <div>
@@ -115,13 +114,13 @@ export default function Portfolio () {
                 <h1 className={styles.titulo}>Meus projetos</h1>
                 <div className={styles.carrossel}>
                     <div className={styles.botao}>
-                        <IoIosArrowBack onClick={()=>passagemCarrossel('-')} className={styles.iconeBotao}/>
+                        <IoIosArrowBack onClick={() => passagemCarrossel('-')} className={styles.iconeBotao} />
                     </div>
                     <div className={styles.itensCarrossel}>
-                        {listaProjetos.map((projeto, index)=>{
-                            return(
+                        {listaProjetos.map((projeto, index) => {
+                            return (
                                 <div key={index} style={verificandoEstilo(index, projeto)} className={styles.espacoImagem}>
-                                    <div onClick={()=>trocaInfoProjeto(projeto.nome)} style={{width: '225px'}}>
+                                    <div onClick={() => trocaInfoProjeto(projeto.nome)} style={{ width: '225px' }}>
                                         <h2 className={styles.tituloProjeto}>{projeto.nome}</h2>
                                     </div>
                                 </div>
@@ -129,12 +128,12 @@ export default function Portfolio () {
                         })}
                     </div>
                     <div className={styles.botao}>
-                        <IoIosArrowForward onClick={()=>passagemCarrossel('+')} className={styles.iconeBotao}/>
+                        <IoIosArrowForward onClick={() => passagemCarrossel('+')} className={styles.iconeBotao} />
                     </div>
                 </div>
             </div>
-            <InfoProjeto projetoNome={trocandoInfoProjeto}/>
+            <InfoProjeto projetoNome={trocandoInfoProjeto} />
         </div>
-        
+
     )
 }
