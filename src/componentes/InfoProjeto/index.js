@@ -17,7 +17,6 @@ export default function InfoProjeto ({ projetoNome='Jogo Da Velha' }) {
 
     console.log(projetoNome)
 
-    /*const slidesTeste = [imagem1, imagem2, imagem3];*/
     const projetos = [
         {
             nome: 'Jogo da velha',
@@ -85,6 +84,16 @@ export default function InfoProjeto ({ projetoNome='Jogo Da Velha' }) {
         }
     ];
 
+    function verificaTexto (texto){
+        const limite = 433;
+        if(texto.length > limite){
+            const novoTexto = `${texto.substring(0, limite)}...`
+            return novoTexto
+        } else{
+            return texto;
+        }
+    }
+
     const [projetoSelecionado, setProjetoSelecionado] = useState({...projetos[0]});
     
     const projetoEmExibicao = projetos.find((projeto)=>projeto.nome.toLowerCase() === projetoNome.toLowerCase());
@@ -110,7 +119,7 @@ export default function InfoProjeto ({ projetoNome='Jogo Da Velha' }) {
                     </p>
                 </div>
                 <div className={styles.textoParte2}>
-                    <p className={styles.textoSobreProjeto}>{projetoSelecionado.texto}</p>
+                    <p className={styles.textoSobreProjeto}>{verificaTexto(projetoSelecionado.texto)}</p>
                 </div>
             </div>
             <div className={styles.espacoImagem}>
