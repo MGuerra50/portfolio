@@ -13,7 +13,7 @@ import { IoLogoHtml5 } from "react-icons/io";
 import { IoLogoCss3 } from "react-icons/io5";
 import { useState } from 'react';
 
-export default function InfoProjeto ({ projetoNome='Jogo Da Velha' }) {
+export default function InfoProjeto ({ projetoNome }) {
 
     console.log(projetoNome)
 

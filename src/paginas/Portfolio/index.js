@@ -13,7 +13,7 @@ import imagem9 from '../../componentes/ImagensGamesTeste/9.png';
 import imagem10 from '../../componentes/ImagensGamesTeste/10.png';
 import imagem11 from '../../componentes/ImagensGamesTeste/11.png';
 import imagem12 from '../../componentes/ImagensGamesTeste/12.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Portfolio() {
 
@@ -80,13 +80,6 @@ export default function Portfolio() {
 
     const [posicaoCarrossel, setPosicaoCarrossel] = useState(0);
 
-    function verificandoEstilo(index, posicaoProjeto) {
-        const marginRight = index === 0 ? -posicaoCarrossel : 0;
-        const marginLeft = index === 0 ? 7 + 'px' : 0;
-        const zIndex = index === 0 && posicaoCarrossel >= (225 * 5) ? -1 : 'auto';
-        return { zIndex, marginLeft, marginRight, backgroundImage: `url(${posicaoProjeto.imagem})` };
-    }
-
     function passagemCarrossel(sentido) {
         const itemsPerPage = 5;
         const totalItems = listaProjetos.length;
@@ -103,9 +96,16 @@ export default function Portfolio() {
         setPosicaoCarrossel(novaPosicaoCarrossel);
     }
     const [trocandoInfoProjeto, setTrocandoInfoProjeto] = useState('Jogo Da Velha');
-
     function trocaInfoProjeto(nomeProjeto) {
         setTrocandoInfoProjeto(nomeProjeto);/* [ PROBLEMA DE re-renderização ] */
+    }
+    useEffect(()=>{console.log(trocaInfoProjeto)});
+
+    function verificandoEstilo(index, posicaoProjeto) {
+        const marginRight = index === 0 ? -posicaoCarrossel : 0;
+        const marginLeft = index === 0 ? 7 + 'px' : 0;
+        const zIndex = index === 0 && posicaoCarrossel >= (225 * 5) ? -1 : 'auto';
+        return { zIndex, marginLeft, marginRight, backgroundImage: `url(${posicaoProjeto.imagem})` };
     }
 
     return (
