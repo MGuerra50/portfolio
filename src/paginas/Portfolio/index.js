@@ -97,7 +97,7 @@ export default function Portfolio() {
     }
     const [trocandoInfoProjeto, setTrocandoInfoProjeto] = useState('Jogo Da Velha');
     function trocaInfoProjeto(nomeProjeto) {
-        setTrocandoInfoProjeto(nomeProjeto);/* [ PROBLEMA DE re-renderização ] */
+        setTrocandoInfoProjeto(nomeProjeto);
     }
 
     function verificandoEstilo(index, posicaoProjeto) {
@@ -108,14 +108,6 @@ export default function Portfolio() {
         const height = '225px';
         return { width, height, zIndex, marginLeft, marginRight, backgroundImage: `url(${posicaoProjeto.imagem})` };
     }
-    // const ref = useRef([]);
-
-    // function escala (index){
-    //     const element = ref.current[index];
-    //     console.log(element)
-    //     /*element.style.width='300px';
-    //     element.style.height='300px';*/
-    // }
 
     return (
         <div>
@@ -141,7 +133,7 @@ export default function Portfolio() {
                     </div>
                 </div>
             </div>
-            <InfoProjeto projetoNome={trocandoInfoProjeto} />
+            <InfoProjeto projetoNome={trocandoInfoProjeto} ativo={true}/>
         </div>
 
     )

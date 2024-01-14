@@ -12,10 +12,13 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { IoLogoHtml5 } from "react-icons/io";
 import { IoLogoCss3 } from "react-icons/io5";
 import { useState } from 'react';
+import styled from 'styled-components';
 
-export default function InfoProjeto ({ projetoNome }) {
+const ItemListaSelecionado = styled.div`
+scale: ${props => props.$ativo === true ? 1.5 : 1 };
+` 
 
-    console.log(projetoNome)
+const InfoProjeto = ({ projetoNome, ativo = false }) => {
 
     const projetos = [
         {
@@ -106,14 +109,15 @@ export default function InfoProjeto ({ projetoNome }) {
             <div className={styles.espacoTextos}>
                 <div className={styles.textoParte1}>
                     <h1 className={styles.titulo}>{projetoSelecionado.nome}</h1>
-                    <div className={styles.iconesTecnologiasUsadas}>
+                    <ItemListaSelecionado className={styles.iconesTecnologiasUsadas} $ativo = {ativo}> 
+                        {console.log(ativo)}
                         {conhecimentos.map(conhecimento=>{
                             return(
                                 projetoSelecionado.tecnologias.map((tecnologia, index)=>tecnologia.toLowerCase()===conhecimento.nome.toLowerCase()
                                     ?<div key={index} style={{width: 80/projetoSelecionado.tecnologias.length+'%'}} className={styles.iconIndividual}>{conhecimento.icon}</div>:'')
                             )
                         })}
-                    </div>
+                    </ItemListaSelecionado>
                     <p className={styles.desenvolvido}>Desenvolvido em {`${projetoSelecionado.desenvolvido}`} | 
                         <a href={projetoSelecionado.repositorio} className={styles.linkRepositorio}>{<IoLogoGithub />} GitHub do projeto</a>
                     </p>
@@ -133,3 +137,5 @@ export default function InfoProjeto ({ projetoNome }) {
         </div>
     );
 }
+
+export default InfoProjeto;
