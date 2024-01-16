@@ -1,7 +1,5 @@
 import Slides from '../../componentes/Slides';
 import styles from './Inicial.module.css';
-/*import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";*/
-
 import imagem1 from '../../imagensTeste/1.png';
 import imagem2 from '../../imagensTeste/2.png';
 import imagem3 from '../../imagensTeste/3.png';
@@ -41,8 +39,8 @@ export default function Inicial () {
                             <div></div>
                             <div className={styles.item3DoGrid}></div>
                             <div className={styles.item6DoGrid}>
-                                <BotaoPadrao texto='Ver'/>
-                                <BotaoPadrao texto='Contato'/>
+                                <BotaoPadrao texto='Portfólio' to={'/portfolio'}/>
+                                <BotaoPadrao texto='Contato' to={'/contato'}/>
                             </div>
                         </span>
                     

@@ -12,11 +12,6 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { IoLogoHtml5 } from "react-icons/io";
 import { IoLogoCss3 } from "react-icons/io5";
 import { useState } from 'react';
-import styled from 'styled-components';
-
-const ItemListaSelecionado = styled.div`
-scale: ${props => props.$ativo === true ? 1.5 : 1 };
-` 
 
 const InfoProjeto = ({ projetoNome, ativo = false }) => {
 
@@ -109,15 +104,14 @@ const InfoProjeto = ({ projetoNome, ativo = false }) => {
             <div className={styles.espacoTextos}>
                 <div className={styles.textoParte1}>
                     <h1 className={styles.titulo}>{projetoSelecionado.nome}</h1>
-                    <ItemListaSelecionado className={styles.iconesTecnologiasUsadas} $ativo = {ativo}> 
-                        {console.log(ativo)}
+                    <div className={styles.iconesTecnologiasUsadas}> 
                         {conhecimentos.map(conhecimento=>{
                             return(
                                 projetoSelecionado.tecnologias.map((tecnologia, index)=>tecnologia.toLowerCase()===conhecimento.nome.toLowerCase()
                                     ?<div key={index} style={{width: 80/projetoSelecionado.tecnologias.length+'%'}} className={styles.iconIndividual}>{conhecimento.icon}</div>:'')
                             )
                         })}
-                    </ItemListaSelecionado>
+                    </div>
                     <p className={styles.desenvolvido}>Desenvolvido em {`${projetoSelecionado.desenvolvido}`} | 
                         <a href={projetoSelecionado.repositorio} className={styles.linkRepositorio}>{<IoLogoGithub />} GitHub do projeto</a>
                     </p>
@@ -131,7 +125,7 @@ const InfoProjeto = ({ projetoNome, ativo = false }) => {
                     <Slides imagens={projetoSelecionado.imagensProjeto}/>
                 </div>
                 <div className={styles.botao}>
-                    <BotaoPadrao texto='Contato'/>
+                    <BotaoPadrao texto='Contato' to={'/contato'}/>
                 </div>
             </div>
         </div>

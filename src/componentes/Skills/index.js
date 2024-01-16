@@ -32,9 +32,9 @@ export default function Skills ({ conhecimentos }){
                 <h1 className={styles.titulo}>Tecnologias</h1>
                 
                 <div className={styles.listaCompleta}>
-                    {conhecimentos.map((tecnologia)=>{
+                    {conhecimentos.map((tecnologia, index)=>{
                         return(
-                            <div className={styles.itemLista}>
+                            <div className={styles.itemLista} key={index}>
                                 <div>
                                     <h3 style={{marginBottom: 1+'%'}}>{tecnologia.nome}</h3>
                                     <div className={styles.barraExterna}>
@@ -49,7 +49,7 @@ export default function Skills ({ conhecimentos }){
                     })}
                 </div>
                 <div className={styles.botao}>
-                    <BotaoPadrao texto='Veja o Portfólio'/>
+                    <BotaoPadrao texto='Veja o Portfólio' to={'/portfolio'}/>
                 </div>
             </div>
         </div>

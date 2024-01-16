@@ -22,7 +22,7 @@ export default function Resumo ({ conhecimentos }) {
                         <li className={styles.textoPadrao}>Programador full-stack</li>
                         {conhecimentos.map((itemLista, index) => <li key={index} className={styles.listaConhecimentos}>{itemLista}</li> )}
                         <div className={styles.botaoSobreMim}> 
-                            <BotaoPadrao className={styles.botaoSobreMim} texto='Sobre mim'/>
+                            <BotaoPadrao className={styles.botaoSobreMim} texto='Sobre mim' to={'/sobremim'}/>
                         </div>
                     </div>
                 </div>
