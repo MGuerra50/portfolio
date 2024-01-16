@@ -96,11 +96,15 @@ export default function Portfolio() {
         setPosicaoCarrossel(novaPosicaoCarrossel);
     }
     const [trocandoInfoProjeto, setTrocandoInfoProjeto] = useState('Jogo Da Velha');
+
+    const [teste, setTeste] = useState(1.5);
+
     function trocaInfoProjeto(nomeProjeto) {
         setTrocandoInfoProjeto(nomeProjeto);
     }
 
     function verificandoEstilo(index, posicaoProjeto) {
+        const scale = teste;
         const marginRight = index === 0 ? -posicaoCarrossel : 0;
         const marginLeft = index === 0 ? 7 + 'px' : 0;
         const zIndex = index === 0 && posicaoCarrossel >= (225 * 5) ? -1 : 'auto';
