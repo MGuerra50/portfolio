@@ -2,7 +2,7 @@
     position: absolute;
     width: 100%;
     height: 100px;
-    background-color: #206597;
+    background: linear-gradient(90deg, #061a34, #033473 50%);
 }
 
 .cabecalho{

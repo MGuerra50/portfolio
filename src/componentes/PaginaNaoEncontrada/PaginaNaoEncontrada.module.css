@@ -1,0 +1,45 @@
+.backgroundPagina{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 40vh;
+    background: /*linear-gradient(90deg, #061a34, #033473 50%)*/ white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.erro404{
+    position: relative;
+    display: flex;
+    justify-self: center;
+    width: auto;
+    height: 500px;
+    margin: 0;
+    color: #033473;
+    transition: 1s;
+}
+
+.titulo{
+    margin: 0;
+    align-self: center;
+    color: #061a34;
+    transition: 0.5s;
+}
+@media (max-width: 763px) {
+    .erro404{
+        position: relative;
+        display: flex;
+        justify-self: center;
+        width: auto;
+        height: 100px;
+        margin: 0;
+        color: #033473;
+    }
+    .titulo{
+        margin: 0;
+        font-size: medium;
+        align-self: center;
+        color: #061a34;
+    }   
+}

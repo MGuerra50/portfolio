@@ -1,13 +1,13 @@
 .botao{
     min-width: 130px;
     min-height: 59px;
-    border: 2px solid #109AFF;
+    border: 2px solid #054496;
     background-color: #000;
     font-weight: 600;
     font-size: medium;
     color: white;
     padding: 3%;
-    transition: 0.2s;
+    transition: 0.25s;
 }
 .botao:hover{
     border: 2.5px solid #109AFF;

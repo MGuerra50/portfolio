@@ -4,6 +4,7 @@ import Inicial from "./paginas/Inicial";
 import SobreMim from "./paginas/SobreMim";
 import Portfolio from "./paginas/Portfolio";
 import Contato from "./paginas/Contato";
+import PaginaNaoEncontrada from "./componentes/PaginaNaoEncontrada/Index";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="sobremim" element={<SobreMim/>}/>
           <Route path="portfolio" element={<Portfolio/>}/>
           <Route path="contato" element={<Contato/>}/>
+          <Route path="*" element={<PaginaNaoEncontrada/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
