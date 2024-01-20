@@ -22,7 +22,6 @@ export default function Inicial () {
                     <span className={styles.movimentoSlide}>
                     
                         <div className={styles.botaoParteExterna}>
-                            {/*<IoIosArrowBack className={styles.iconSlide}/>*/}
                         </div>
                     
                         <span className={styles.espacoSlide}>
@@ -45,7 +44,6 @@ export default function Inicial () {
                         </span>
                     
                         <div className={styles.botaoParteExterna}>
-                            {/*<IoIosArrowForward className={styles.iconSlide}/>*/}
                         </div>
                     </span>
                 </div>

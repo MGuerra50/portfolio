@@ -31,7 +31,7 @@ export default function Contato() {
                         </span>
                     </div>
                 </div>
-                <div className={styles.campoContato} style={{ borderLeft: '2px solid #109AFF', borderRight: '2px solid #109AFF' }}>
+                <div className={styles.campoContato} style={{ borderLeft: '2px solid #033473', borderRight: '2px solid #033473' }}>
                     <div className={styles.espacoIcon}>
                         <MdOutlineMarkEmailRead className={styles.icon} />
                     </div>
