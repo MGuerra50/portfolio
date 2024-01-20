@@ -1,6 +1,5 @@
 .espacoCertificacoes{
     position: relative;
-    top: 100px;
     width: 1220px;
     height: 607px;
     background-color: #fff;
@@ -10,12 +9,6 @@
     overflow-x: hidden;
     overflow-y: visible;
 }
-
-/*.backgroundDivisao{   /*Analisar manter ou tirar essa <div> *//*
-    height: 100%;
-    width: 50%;
-    background-color:/* rgba(49,49,49,1)*/ /*#fff;
-}*/
 
 .circulo{
     position: absolute;
