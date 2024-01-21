@@ -6,22 +6,7 @@ import imagem3 from '../../imagensTeste/3.png';
 import Resumo from '../../componentes/Resumo';
 import BotaoPadrao from '../../componentes/BotaoPadrao';
 import Certificacoes from '../../componentes/Certificacoes';
-import styled from 'styled-components';
-
-const EstiloPagina = styled.div`
-    position: relative;
-    height: auto;
-    width: 1220px;
-    top: 110px;
-    right: -50%;
-    transform: translateX(-50%);
-    justify-content: center;
-    background-color: transparent;
-    border: 1px solid #033473;
-    box-shadow: 0px 0px 7px 0px #033473ac;
-    border-radius: 7px;
-    overflow: hidden;
-`
+import MoldeContainers from '../../componentes/MoldeContainers/Index';
 
 export default function Inicial() {
 
@@ -29,7 +14,7 @@ export default function Inicial() {
     const conhecimentos = ['React', 'NodeJs', 'PostgreSQL', 'MER', 'HTML', 'CSS'];
 
     return (
-        <EstiloPagina>
+        <MoldeContainers>
             <div className={styles.slideShow}>
 
                 <Slides imagens={testeSlide} />
@@ -66,7 +51,6 @@ export default function Inicial() {
             </div>
             <Resumo conhecimentos={conhecimentos} />
             <Certificacoes />
-        </EstiloPagina>
-
+        </MoldeContainers>
     );
 }

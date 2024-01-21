@@ -1,6 +1,5 @@
 .carrosselEspaco{
     position: relative;
-    top: 100px;
     width: 1220px;
     height: auto;
     background-color: #fff;
@@ -8,7 +7,6 @@
     grid-template-rows: auto auto;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 2%;
 }
 
 .titulo{
@@ -32,7 +30,7 @@
 }
 
 .botao{
-    background-color: #303030;
+    background-color: transparent;
     width: 30px;
     height: 70px;
     border-radius: 8px;
@@ -40,14 +38,15 @@
     justify-content: center;
     transition: 0.3s;
     cursor: pointer;
+    border: 1px solid #033473;
 }
 
 .botao:hover{
-    transform: scale3d(1.1, 1.1, 1);
+    transform: scale(1.03);
 }
 
 .iconeBotao{
-    color: #fff;
+    color: #033473;
     margin: 0;
     width: 90%;
     height: auto;

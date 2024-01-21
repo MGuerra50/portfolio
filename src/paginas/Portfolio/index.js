@@ -14,6 +14,7 @@ import imagem10 from '../../componentes/ImagensGamesTeste/10.png';
 import imagem11 from '../../componentes/ImagensGamesTeste/11.png';
 import imagem12 from '../../componentes/ImagensGamesTeste/12.png';
 import { useState } from 'react';
+import MoldeContainers from '../../componentes/MoldeContainers/Index';
 
 export default function Portfolio() {
 
@@ -111,11 +112,11 @@ export default function Portfolio() {
     }
 
     return (
-        <div>
+        <MoldeContainers>
             <div className={styles.carrosselEspaco}>
                 <h1 className={styles.titulo}>Meus projetos</h1>
                 <div className={styles.carrossel}>
-                    <div className={styles.botao}>
+                    <div className={styles.botao} style={{marginLeft: '10px'}}>
                         <IoIosArrowBack onClick={() => passagemCarrossel('-')} className={styles.iconeBotao} />
                     </div>
                     <div className={styles.itensCarrossel}>
@@ -129,13 +130,12 @@ export default function Portfolio() {
                             )
                         })}
                     </div>
-                    <div className={styles.botao}>
+                    <div className={styles.botao} style={{marginRight: '10px'}}>
                         <IoIosArrowForward onClick={() => passagemCarrossel('+')} className={styles.iconeBotao} />
                     </div>
                 </div>
             </div>
             <InfoProjeto projetoNome={trocandoInfoProjeto}/>
-        </div>
-
+        </MoldeContainers>
     )
 }
