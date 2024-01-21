@@ -1,8 +1,8 @@
 .skills{
     position: relative;
-    width: 1220px;
-    height: 677px;
-    top: 100px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: grid;
@@ -12,6 +12,7 @@
 
 .lado1Div{
     width: 90%;
+    height: 105%;
     background-color: #ffffff;
     text-align: justify;
     font-weight: 500;
@@ -58,6 +59,7 @@
 }
 
 .lado2Div{
+    height: 105%;
     background-color: #f0f0f0;
 }
 

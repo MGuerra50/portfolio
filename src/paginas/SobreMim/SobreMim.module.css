@@ -1,8 +1,7 @@
 .sobreMim{
     position: relative;
-    width: 1220px;
-    height: 607px;
-    top: 100px;
+    width: 100%;
+    height: auto;
     left: 50%;
     transform: translateX(-50%);
     display: grid;
