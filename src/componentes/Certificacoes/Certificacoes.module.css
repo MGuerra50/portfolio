@@ -48,9 +48,41 @@
 
 .posicionandoSlide{
     position: absolute;
-    width: 200%;
+    width: 100%;
     height: auto;
-    left: -50%;
+    left: 0%;
     top: 20%;
     scale: 70%;
+    transition: 0.5s;
+}
+
+@media (max-width: 1080px){
+    .titulo{
+        padding-top: 69px;
+        padding-bottom: 69px;
+        padding-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .posicionandoSlide{
+        scale: 60%;
+    }
+}
+
+@media (max-width: 850px){
+    .espacoCertificacoes{
+        height: 40vh;
+    }
+
+    .posicionandoSlide{
+        top: 25%;
+        scale: 50%;
+    }
+}
+@media(max-width: 720px){
+    .posicionandoSlide{
+        top: 25%;
+        scale: 40%;
+    }
 }

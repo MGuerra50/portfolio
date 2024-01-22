@@ -21,10 +21,6 @@ export default function Inicial() {
 
                 <div className={styles.backgroundSlide}>
                     <span className={styles.movimentoSlide}>
-
-                        <div className={styles.botaoParteExterna}>
-                        </div>
-
                         <span className={styles.espacoSlide}>
                             <div className={styles.item3DoGrid}></div>
                             <div></div>
@@ -43,9 +39,6 @@ export default function Inicial() {
                                 <BotaoPadrao texto='Contato' to={'/contato'} />
                             </div>
                         </span>
-
-                        <div className={styles.botaoParteExterna}>
-                        </div>
                     </span>
                 </div>
             </div>
