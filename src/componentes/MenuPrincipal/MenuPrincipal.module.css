@@ -8,4 +8,17 @@
     margin-left: 5%;
     margin-right: 5%;
     text-wrap: nowrap;
+    font-size: 1.7em;
+}
+
+@media (max-width: 1080px){
+    .item{
+        font-size: 1.4em;
+    }
+}
+@media (max-width: 700px){
+    .item{
+        margin-top: 3%;
+        font-size: 1.35em;
+    }
 }

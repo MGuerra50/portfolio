@@ -12,7 +12,7 @@ export default function Certificacoes () {
             <div className={styles.espacoCertificacoes}>
                 <div className={styles.backgroundDivisao}>
                     <div className={styles.circulo}/>
-                    <h1 className={styles.titulo}>Certificacoes</h1>
+                    <h1 className={styles.titulo}>Certificações</h1>
                     <div className={styles.posicionandoSlide}>
                         <Slides imagens={testeSlide}/>
                     </div>
