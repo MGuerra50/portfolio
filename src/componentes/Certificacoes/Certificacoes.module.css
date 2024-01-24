@@ -71,18 +71,30 @@
 }
 
 @media (max-width: 850px){
+    .titulo{
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
     .espacoCertificacoes{
-        height: 40vh;
+        height: 430px;
     }
 
     .posicionandoSlide{
-        top: 25%;
+        position: relative;
         scale: 50%;
     }
 }
 @media(max-width: 720px){
     .posicionandoSlide{
-        top: 25%;
-        scale: 40%;
+        scale: 26%;
+    }
+
+    .circulo{
+        visibility: hidden;
+    }
+
+    .quadrado{
+        visibility: hidden;
     }
 }

@@ -3,7 +3,12 @@
     width: 100%;
     justify-content: center;
     background-color:#fff;
-    height: 100%;
+    max-height: 100%;
+}
+
+.slidePaginaInicial{
+    transform: scaleX(auto);
+    transform: scaleY(auto);
 }
 
 .backgroundSlide{
@@ -28,8 +33,8 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 700px 520px;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 57% 43%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
     color: white;
     justify-items: center;
     align-items: center;
@@ -80,17 +85,37 @@
     color: white;
 }
 
-@media (max-width: 1219px){ 
+@media (max-width: 1219px) or (orientation: portrait) { 
+    .slidePaginaInicial{
+        transform: scale(0.95);
+        height: 95%;
+    }
+
+    .backgroundSlide{
+        position: relative;
+        width: 100%;
+        /* height: 576px; */
+        height: calc((95vw) * 0.497);
+    }
+
     .movimentoSlide{
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
         height: 607px; 
+        display: block;
     }   
 
     .espacoSlide{
         width: 100%;
+        height: 95%;
         grid-template-columns: 57% 43%;
+    }
+}
+
+@media (max-width: 1060px){
+    .backgroundSlide{
+        height: calc(1040px * 0.497);
     }
 }
 
@@ -98,22 +123,81 @@
     .item6DoGrid{
         margin-left: -35%;
     }
+
+    .backgroundSlide{
+        position: relative;
+        width: 100%;
+        height: calc(1000px * 0.497);
+    }
+
+    .slidePaginaInicial{
+        transform: scale(0.9);
+        height: 90%;
+    }
+
+    .espacoSlide{
+        width: 100%;
+        height: 90%;
+    }
 }
 
 @media (max-width: 800px){
     .item6DoGrid{
         margin-left: -65%;
     }
+
+    .backgroundSlide{
+        position: relative;
+        width: 100%;
+        height: 424px;
+    }
+    
+    .slidePaginaInicial{
+        transform: scale(0.85);
+        height: 85%;
+    }
+
+    .espacoSlide{
+        width: 100%;
+        height: 85%;
+    }
 }
 
 @media (max-width: 700px){
     .item6DoGrid{
+        margin-top: 20%;
         margin-left: -105%;
+    }
+
+    .slidePaginaInicial{
+        transform: scale(0.75);
+        height: 75%;
+    }
+
+    .espacoSlide{
+        width: 100%;
+        height: 75%;
     }
 }
 
-@media (max-width: 600px){
-    .item6DoGrid{
-        margin-left: -170%;
+@media (max-width: 600px) {
+
+    .item3DoGrid h1{
+        visibility: hidden;
+    }
+
+    .item3DoGrid h3{
+        visibility: hidden;
+    }
+
+    .slidePaginaInicial{
+        transform: scale(70%);
+        height: 70%;
+    }
+
+    .espacoSlide{
+        visibility: hidden;
+        width: 100%;
+        height: 70%;
     }
 }

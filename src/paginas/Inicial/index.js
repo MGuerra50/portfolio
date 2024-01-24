@@ -16,8 +16,9 @@ export default function Inicial() {
     return (
         <MoldeContainers>
             <div className={styles.slideShow}>
-
-                <Slides imagens={testeSlide} />
+                <div className={styles.slidePaginaInicial}>
+                    <Slides imagens={testeSlide}/>
+                </div>
 
                 <div className={styles.backgroundSlide}>
                     <span className={styles.movimentoSlide}>
