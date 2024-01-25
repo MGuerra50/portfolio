@@ -10,7 +10,11 @@
 }
 
 .apresentacao{
+    height: 100%;
     background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
 }
 
 .divImagem{
@@ -34,6 +38,7 @@
     font-weight: 500;
     margin: 0;
     text-align: center;
+    padding: 0px 10px;
 }
 
 .imagem{
@@ -56,4 +61,23 @@
     position: relative;
     width: 50%;
     height: auto;
+}
+
+@media (max-width: 1200px) {
+    .texto{
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 1125px) {
+    .sobreMim{
+        grid-template-columns: 445px auto;
+    }
+}
+
+@media (max-width: 1080px) {
+    .tituloParteTexto{
+        font-size: x-large;
+    }
 }

@@ -76,3 +76,21 @@
     transition: 0.5s;
     scale: 120%;
 }
+
+@media (max-width: 1200px) {
+    .lado1Div p{
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .lado1Div li{
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 1080px) {
+    .lado1Div h1{
+        font-size: x-large;
+    }
+}

@@ -29,7 +29,6 @@
     padding-bottom: 69px;
     padding-left: 224px;
     color: #313131;
-    z-index: 100;
 }
 
 .quadrado{
@@ -86,15 +85,23 @@
     }
 }
 @media(max-width: 720px){
+    .titulo{
+        position: relative;
+        z-index: 1;
+    }
+
     .posicionandoSlide{
-        scale: 26%;
+        scale: 40%;
+        z-index: 1;
     }
 
     .circulo{
-        visibility: hidden;
+        opacity: 0.5;
+        z-index: 0;
     }
 
     .quadrado{
-        visibility: hidden;
+        opacity: 0.5;
+        z-index: 0;
     }
 }

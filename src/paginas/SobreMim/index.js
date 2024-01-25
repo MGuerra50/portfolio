@@ -59,7 +59,7 @@ export default function SobreMim() {
                     <p className={styles.habilidades}>Graduando em Engenharia de Computação</p>
                 </div>
                 <div className={styles.texto}>
-                    <h1 style={{ margin: 0 }}>Olá, me chamo  Matheus</h1>
+                    <h1 className={styles.tituloParteTexto} style={{ margin: 0 }}>Olá, me chamo  Matheus</h1>
                     <p>
                         Desde de bem novo eu sempre me interessei por computadores, tanto o hardware, quanto o software.
                         Eu sempre quis saber como construir um computador, entender como o mundo físico interage com mundo lógico.
