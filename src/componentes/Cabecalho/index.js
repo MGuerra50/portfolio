@@ -22,7 +22,7 @@ export default function Cabecalho() {
                 </div>
 
                 <div className={styles.menuPrincipal}>
-                    <MenuPrincipal cor='#ffffff' />
+                    <MenuPrincipal cor='#ffffff' podeQuebrar={false} />
                 </div>
 
             </div>

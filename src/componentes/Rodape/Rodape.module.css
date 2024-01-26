@@ -52,3 +52,15 @@
         text-wrap: wrap;
     }
 }
+
+@media (max-width: 430px) {
+    .rodape{
+        top: 70px;
+    }
+}
+
+@media (max-width: 330px) {
+    .rodape{
+        top: 90px;
+    }
+}

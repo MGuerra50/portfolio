@@ -39,6 +39,33 @@
 }
 
 .menuPrincipal {
+    width: 100%;
     transform: translateY(30%);
     justify-content: center;
+}
+
+
+@media (max-width: 900px) {
+    .cabecalho {
+        grid-template-columns: 25% 75%;
+    }
+    .logo {
+        height: 40px;
+        width: 40px;
+    }
+    .menuPrincipal {
+        width: 85%;
+        height: 140%;
+        transform: translateY(30%);
+        align-content: center;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .logo {
+        height: 30px;
+        width: 30px;
+    }
+    
 }
