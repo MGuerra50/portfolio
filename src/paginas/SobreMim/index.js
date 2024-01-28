@@ -51,12 +51,16 @@ export default function SobreMim() {
             <div className={styles.sobreMim}>
                 <div className={styles.apresentacao}>
                     <p className={styles.destaque}>Estagiário</p>
-                    <div className={styles.divImagem}>
-                        <img className={styles.imagem} src={imagem} alt='Homem de camisa azul' />
+                    <div className={styles.envolvendoImagem}>
+                        <div className={styles.divImagem}>
+                            <img className={styles.imagem} src={imagem} alt='Homem de camisa azul' />
+                        </div>
                     </div>
-                    <p className={styles.destaque}>Matheus Guerra</p>
-                    <p className={styles.habilidades}>Programador full-stack</p>
-                    <p className={styles.habilidades}>Graduando em Engenharia de Computação</p>
+                    <div className={styles.textoDaFoto}>
+                        <p className={styles.destaque}>Matheus Guerra</p>
+                        <p className={styles.habilidades}>Programador full-stack</p>
+                        <p className={styles.habilidades}>Graduando em Engenharia de Computação</p>
+                    </div>
                 </div>
                 <div className={styles.texto}>
                     <h1 className={styles.tituloParteTexto} style={{ margin: 0 }}>Olá, me chamo  Matheus</h1>

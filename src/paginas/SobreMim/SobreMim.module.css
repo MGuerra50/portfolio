@@ -11,19 +11,21 @@
 
 .apresentacao{
     height: 100%;
+    width: 100%;
     background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    align-self: baseline;
+    display: grid;
+    grid-template-rows: 100px 245px 187px auto;
 }
-
+.envolvendoImagem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .divImagem{
     position: relative;
     width: 46%;
     height: 46%;
     border-radius: 100%;
-    left: 50%;
-    transform: translateX(-52%);
 }
 
 .destaque{
@@ -45,6 +47,15 @@
     width: 100%;
     border-radius: 100%;
     border: 20px solid #ffffff;
+}
+
+.textoDaFoto{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    bottom: 5%;
 }
 
 .texto{
@@ -79,5 +90,33 @@
 @media (max-width: 1080px) {
     .tituloParteTexto{
         font-size: x-large;
+    }
+}
+@media (max-width: 870px){
+    .sobreMim{
+        display: flex;
+        flex-direction: column;
+    }
+    .divImagem{
+        width: 255px;
+        height: 255px;
+        bottom: 12%;
+    }
+    .imagem{
+        width: 90%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        border: 5px solid #ffffff;
+    }
+    .texto{
+        position: relative;
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 20px;
+    }
+    .habilidades{
+        font-size: 21px;
+        font-weight: 400;
     }
 }
