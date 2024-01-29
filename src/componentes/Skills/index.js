@@ -29,7 +29,7 @@ export default function Skills ({ conhecimentos }){
                 </li>
             </div>
             <div className={styles.lado2Div}>
-                <h1 className={styles.titulo}>Tecnologias</h1>
+                <h1 className={styles.titulo} style={{paddingLeft: '10%'}}>Tecnologias</h1>
                 
                 <div className={styles.listaCompleta}>
                     {conhecimentos.map((tecnologia, index)=>{

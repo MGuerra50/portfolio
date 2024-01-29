@@ -1,0 +1,20 @@
+.popUpMenu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    z-index: 9999;
+}
+
+.menuPrincipal{
+    background-color: white;
+}
+
+.sairMenu{
+    background-color: transparent;
+}

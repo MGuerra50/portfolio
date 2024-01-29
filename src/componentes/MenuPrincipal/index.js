@@ -1,7 +1,7 @@
 import Links from '../Links';
 import styles from './MenuPrincipal.module.css';
 
-function MenuPrincipal({ cor = '#000000', podeQuebrar = true }) {
+function MenuPrincipal({ cor = '#000000', podeQuebrar = true, background }) {
 
     const estilo = () => {
         if(podeQuebrar===true){
@@ -11,7 +11,11 @@ function MenuPrincipal({ cor = '#000000', podeQuebrar = true }) {
     }
 
     return (
-        <div style={podeQuebrar===false?{flexDirection: 'row'}:{display: 'flex'}} className={styles.menuPrincipal}>
+        <div 
+            style={podeQuebrar===false ? {flexDirection: 'row'}
+                : background ? {backgroundColor: background} : {display: 'flex'}} 
+                className={styles.menuPrincipal}
+            >
             <Links to={'/'}>
                 <h1 style={estilo()} className={styles.item}>Home</h1>
             </Links>
