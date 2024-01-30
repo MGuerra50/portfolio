@@ -5,6 +5,17 @@
     justify-content: center;
 }
 
+.menuPrincipalMobile{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 .item{
     width: 100%;
     margin: 0;
@@ -15,11 +26,25 @@
 }
 
 @media (max-width: 1080px){
+    .menuPrincipal{
+        align-items: center;
+    }
     .item{
         font-size: 1.4em;
     }
 }
-@media (max-width: 700px) {
+@media (orientation: portrait){
+    .menuPrincipal{
+        text-align: center;
+        flex-direction: column;
+    }
+    .itemMenu{
+        width: 100%;
+        height: 20%;
+    }
+}
+
+@media (max-width: 700px){
     .item{
         margin-top: 3%;
         font-size: 0.70em;
