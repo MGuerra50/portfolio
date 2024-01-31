@@ -4,7 +4,7 @@ import styles from './Cabecalho.module.css';
 import logo from './Logo/logo2.png';
 import { Link } from 'react-router-dom';
 import { IoMenu } from "react-icons/io5";
-import { MdClose } from "react-icons/md";
+// import { MdClose } from "react-icons/md";
 import { useState } from 'react';
 import MenuPopUp from '../MenuPopUp/Index';
 import ReactDOM from 'react-dom';
@@ -25,7 +25,7 @@ export default function Cabecalho() {
 
     const menuPopUpContainer = () => {
         return ReactDOM.createPortal(
-            <MenuPopUp className={styles.menuPopUp} acaoMenu={menuPopUpVisivel} sair={()=>toqueMenu()}/>,
+            <MenuPopUp className={styles.menuPopUp} acaoMenu={menuPopUpVisivel} sair={() => toqueMenu()} />,
             document.body
         );
     };
@@ -44,12 +44,8 @@ export default function Cabecalho() {
                     <MenuPrincipal cor='#ffffff' podeQuebrar={false} />
                 </div>
                 <div className={styles.menuPrincipalPopUp}>
-                    {menuPopUpVisivel === false
-                        ? <IoMenu className={styles.iconeMenuPopUp} onClick={() => toqueMenu()} />
-                        : <MdClose className={styles.iconeMenuPopUp} onClick={() => toqueMenu()} />
-                    }
+                    <IoMenu className={styles.iconeMenuPopUp} onClick={() => toqueMenu()} />
                     {menuPopUpContainer()}
-                    {/* <MenuPopUp className={styles.menuPopUp} acaoMenu={menuPopUpVisivel} /> */}
                 </div>
 
             </div>

@@ -1,13 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Links.module.css';
 
-export default function Links({ children, to, extender }) {
+export default function Links({ children, to, extender, mobile }) {
     const localizacao = useLocation();
     return (
         <Link className = {`
-            ${styles.link} 
-            ${localizacao.pathname === to ? styles.realceLink : ""}
-            `} to={to} style={extender?{width:extender}:{width:'auto'}}>
+            ${mobile ? styles.linkMobile : styles.link} 
+            ${localizacao.pathname === to ? mobile ? styles.realceLinkMobile : styles.realceLink : ""}
+            `} to={to} style={extender && mobile ?{width:extender}:{width:'auto'}}>
 
             {children}
 

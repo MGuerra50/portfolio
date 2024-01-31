@@ -48,25 +48,8 @@
     visibility: hidden;
 }
 
-/* .menuPopUp{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: auto;
-    height: auto;
-    background-color: rgba(0, 0, 0, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-} */
-
 @media (max-width: 900px) {
 
-    /* .cabecalho {
-        grid-template-columns: 25% 75%; 
-    } */
     .logo {
         height: 40px;
         width: 40px;

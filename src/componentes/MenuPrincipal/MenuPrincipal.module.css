@@ -25,6 +25,13 @@
     font-size: 1.7em;
 }
 
+.itemMobile{
+    width: 100%;
+    margin: 0;
+    text-wrap: nowrap;
+    font-size: 1.7em;
+}
+
 @media (max-width: 1080px){
     .menuPrincipal{
         align-items: center;
@@ -55,8 +62,4 @@
         text-align: center;
         flex-direction: column;
     }
-    /* .item{
-        font-size: 1.1em;
-        margin-bottom: 7px;
-    } */
 }

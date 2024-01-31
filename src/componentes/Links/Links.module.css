@@ -11,6 +11,19 @@
     text-shadow: 0px 0px 5px whitesmoke;
 }
 
+.linkMobile{
+    text-decoration-line: none;
+    color: transparent;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.linkMobile:hover{
+    background-color: rgba(3, 52, 115, 0.1);
+    text-shadow: 0px 0px 5px whitesmoke;
+}
+
 .realceLink{
     text-shadow: 0px 0px 0.5px white, 0 0 1em white;
     text-decoration: underline;
@@ -18,4 +31,11 @@
     color: white;
     transform: translateY(-3px);
     transition: 0.5s;
+}
+
+.realceLinkMobile{
+    text-shadow: 0px 0px 0.5px white, 0 0 1em white;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    color: white;
 }

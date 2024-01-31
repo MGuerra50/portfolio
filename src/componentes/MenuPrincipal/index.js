@@ -1,7 +1,7 @@
 import Links from '../Links';
 import styles from './MenuPrincipal.module.css';
 
-function MenuPrincipal({ cor = '#000000', podeQuebrar = true, background, mobile }) {
+function MenuPrincipal({ cor = '#000000', podeQuebrar = true, background, mobile, extender }) {
 
     const estilo = () => {
         if (podeQuebrar === true) {
@@ -16,17 +16,17 @@ function MenuPrincipal({ cor = '#000000', podeQuebrar = true, background, mobile
                 : background ? { backgroundColor: background } : { display: 'flex' }}
             className={mobile ? styles.menuPrincipalMobile : styles.menuPrincipal}
         >
-            <Links to={'/'} className={styles.itemMenu} extender={'100vw'}>
-                <h1 style={estilo()} className={styles.item}>Home</h1>
+            <Links to={'/'} className={styles.itemMenu} extender={extender} mobile={mobile}>
+                <h1 style={estilo()} className={mobile? styles.itemMobile : styles.item}>Home</h1>
             </Links>
-            <Links to={'/portfolio'} className={styles.itemMenu}>
-                <h1 style={estilo()} className={styles.item}>Portfólio</h1>
+            <Links to={'/portfolio'} className={styles.itemMenu} extender={extender} mobile={mobile}>
+                <h1 style={estilo()} className={mobile? styles.itemMobile : styles.item}>Portfólio</h1>
             </Links>
-            <Links to={'/contato'} className={styles.itemMenu}>
-                <h1 style={estilo()} className={styles.item}>Contato</h1>
+            <Links to={'/contato'} className={styles.itemMenu} extender={extender} mobile={mobile}>
+                <h1 style={estilo()} className={mobile? styles.itemMobile : styles.item}>Contato</h1>
             </Links>
-            <Links to={'/sobremim'} className={styles.itemMenu}>
-                <h1 style={estilo()} className={styles.item}>Sobre mim</h1>
+            <Links to={'/sobremim'} className={styles.itemMenu} extender={extender} mobile={mobile}>
+                <h1 style={estilo()} className={mobile? styles.itemMobile : styles.item}>Sobre mim</h1>
             </Links>
         </div>
     );
