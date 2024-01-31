@@ -183,3 +183,21 @@
 .botaoSobreMim{
     margin-left: 55%;
 }
+@media (max-width: 705px){
+    .backgroundAzul{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        scale: 0.9;
+    }
+
+}
+@media (max-width: 480px){
+    .backgroundAzul{
+        position: relative;
+        left: 50%;
+        transform: translateX(-70%);
+        scale: 0.7;
+    }
+
+}
