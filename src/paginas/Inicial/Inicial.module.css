@@ -11,10 +11,6 @@
     transform: scaleY(auto);
 }
 
-/* .slidePaginaInicialMobile {
-    visibility: hidden;
-} */
-
 .backgroundSlide {
     position: relative;
     width: 100%;
@@ -152,9 +148,7 @@
     }
 
     .backgroundSlide {
-        position: relative;
-        width: 100%;
-        height: calc(1000px * 0.497);
+        height: calc(940px * 0.497);
     }
 
     .slidePaginaInicial {
@@ -170,6 +164,9 @@
 @media (max-width: 870px){
     .slidePaginaInicial {
         scale: 70%;
+    }
+    .backgroundSlide {
+        height: calc(860px * 0.497);
     }
 }
 
@@ -201,6 +198,9 @@
 }
 
 @media (max-width: 700px) {
+    .backgroundSlide {
+        height: calc(735px * 0.497);
+    }
     .item6DoGrid {
         margin-top: 20%;
         margin-left: -105%;
@@ -220,17 +220,35 @@
     .slidePaginaInicial {
         scale: 55%;
     }
+    .backgroundSlide {
+        height: calc(670px * 0.497);
+    }
 }
 
 @media (max-width: 650px){
     .slidePaginaInicial {
         scale: 50%;
     }
+    .backgroundSlide {
+        height: calc(610px * 0.497);
+    }
 }
 
 @media (max-width: 625px){
+    .slideShow {
+        position: relative;
+        display: flex;
+        left: 50%;
+        transform: translateX(-25%);
+        bottom: 80px;
+        height: 46vh;
+    }
+
     .slidePaginaInicial {
-        scale: 47%;
+        scale: 48%;
+    }
+    .backgroundSlide {
+        visibility: hidden;
     }
 }
 
@@ -245,7 +263,7 @@
     }
 
     .slidePaginaInicial {
-        scale: 45%;
+        scale: 47%;
     }
 
     .espacoSlide {
@@ -259,11 +277,19 @@
     .slidePaginaInicial {
         scale: 44%;
     }
+    .slideShow {
+        bottom: 75px;
+        height: 43vh;
+    }
 }
 
 @media (max-width: 535px){
     .slidePaginaInicial {
-        scale: 40%;
+        scale: 41%;
+    }
+    .slideShow {
+        bottom: 75px;
+        height: 40vh;
     }
 }
 
@@ -271,29 +297,45 @@
     .slidePaginaInicial {
         scale: 38%;
     }
+    .slideShow {
+        bottom: 73px;
+        height: 38vh;
+    }
 }
 
 @media (max-width: 465px){
     .slidePaginaInicial {
         scale: 35%;
     }
+    .slideShow {
+        bottom: 70px;
+        height: 35vh;
+    }
 }
 
 @media (max-width: 430px){
     .slidePaginaInicial {
-        scale: 32%;
+        scale: 33%;
+    }
+    .slideShow {
+        bottom: 67px;
+        height: 32vh;
     }
 }
 
 @media (max-width: 408px){
     .slidePaginaInicial {
-        scale: 30%;
+        scale: 32%;
     }
 }
 
 @media (max-width: 380px){
     .slidePaginaInicial {
-        scale: 28%;
+        scale: 30%;
+    }
+    .slideShow {
+        bottom: 65px;
+        height: 30vh;
     }
 }
 
@@ -301,17 +343,29 @@
     .slidePaginaInicial {
         scale: 27%;
     }
+    .slideShow {
+        bottom: 60px;
+        height: 25vh;
+    }
 }
 
 @media (max-width: 335px){
     .slidePaginaInicial {
         scale: 25%;
     }
+    .slideShow {
+        bottom: 57px;
+        height: 25vh;
+    }
 }
 
 @media (max-width: 310px){
     .slidePaginaInicial {
         scale: 24%;
+    }
+    .slideShow {
+        bottom: 54px;
+        height: 23vh;
     }
 }
 
@@ -325,22 +379,38 @@
     .slidePaginaInicial {
         scale: 22%;
     }
+    .slideShow {
+        bottom: 55px;
+        height: 21vh;
+    }
 }
 
 @media (max-width: 267px){
     .slidePaginaInicial {
         scale: 20%;
     }
+    .slideShow {
+        bottom: 50px;
+        height: 19vh;
+    }
 }
 
 @media (max-width: 250px){
     .slidePaginaInicial {
-        scale: 18%;
+        scale: 19%;
+    }
+    .slideShow {
+        bottom: 47px;
+        height: 19vh;
     }
 }
 
 @media (max-width: 237px){
     .slidePaginaInicial {
-        scale: 17%;
+        scale: 18.5%;
+    }
+    .slideShow {
+        bottom: 48px;
+        height: 18vh;
     }
 }
