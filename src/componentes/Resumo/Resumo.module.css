@@ -201,3 +201,9 @@
     }
 
 }
+
+@media(max-width: 575px){
+    .titulo{
+        font-size: larger;
+    }
+}

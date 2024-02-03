@@ -107,6 +107,9 @@
 }
 
 @media(max-width: 535px){
+    .titulo{
+        font-size: larger;
+    }
     .espacoCertificacoes{
         height: 357px;
     }
