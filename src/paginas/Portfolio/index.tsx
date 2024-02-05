@@ -1,7 +1,9 @@
-import InfoProjeto from '../../componentes/InfoProjeto';
+import InfoProjeto from '../../componentes/InfoProjeto/index.js';
 import styles from './Portfolio.module.css';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import listaProjetos from './listaProjetos.json';
+import { useState } from 'react';
+import MoldeContainers from '../../componentes/MoldeContainers/Index.js';
 // import imagem1 from '../../componentes/ImagensGamesTeste/1.png';
 // import imagem2 from '../../componentes/ImagensGamesTeste/2.png';
 // import imagem3 from '../../componentes/ImagensGamesTeste/3.png';
@@ -14,8 +16,14 @@ import listaProjetos from './listaProjetos.json';
 // import imagem10 from '../../componentes/ImagensGamesTeste/10.png';
 // import imagem11 from '../../componentes/ImagensGamesTeste/11.png';
 // import imagem12 from '../../componentes/ImagensGamesTeste/12.png';
-import { useState } from 'react';
-import MoldeContainers from '../../componentes/MoldeContainers/Index';
+
+interface PropsListaProjetos {
+    projeto: {
+        nome: string
+        imagem: string
+    }
+    index: number
+}
 
 export default function Portfolio() {
 
@@ -82,7 +90,7 @@ export default function Portfolio() {
 
     const [posicaoCarrossel, setPosicaoCarrossel] = useState(0);
 
-    function passagemCarrossel(sentido) {
+    function passagemCarrossel(sentido: string) {
         const itemsPerPage = 5;
         const totalItems = listaProjetos.length;
         const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -98,18 +106,18 @@ export default function Portfolio() {
         setPosicaoCarrossel(novaPosicaoCarrossel);
     }
     const [trocandoInfoProjeto, setTrocandoInfoProjeto] = useState('Jogo Da Velha');
-    
-    function trocaInfoProjeto(nomeProjeto) {
+
+    function trocaInfoProjeto(nomeProjeto:string) {
         setTrocandoInfoProjeto(nomeProjeto);
     }
 
-    function verificandoEstilo(index, posicaoProjeto) {
+    function verificandoEstilo({index, projeto}: PropsListaProjetos) {
         const marginRight = index === 0 ? -posicaoCarrossel : 0;
         const marginLeft = index === 0 ? 7 + 'px' : 0;
         const zIndex = index === 0 && posicaoCarrossel >= (225 * 5) ? -1 : 'auto';
         const width = '225px';
         const height = '225px';
-        return { width, height, zIndex, marginLeft, marginRight, backgroundImage: `url(${posicaoProjeto.imagem})` };
+        return { width, height, zIndex, marginLeft, marginRight, backgroundImage: `url(${projeto.imagem})` };
     }
 
     return (
@@ -117,14 +125,14 @@ export default function Portfolio() {
             <div className={styles.carrosselEspaco}>
                 <h1 className={styles.titulo}>Meus projetos</h1>
                 <div className={styles.carrossel}>
-                    <div className={styles.botao} style={{marginLeft: '10px'}}>
+                    <div className={styles.botao} style={{ marginLeft: '10px' }}>
                         <IoIosArrowBack onClick={() => passagemCarrossel('-')} className={styles.iconeBotao} />
                     </div>
                     <div className={styles.itensCarrossel}>
-                        {listaProjetos.map((projeto, index) => {
+                        {listaProjetos.map(({ projeto, index }: PropsListaProjetos) => {
                             return (
-                                <div key={index} style={verificandoEstilo(index, projeto)} className={styles.espacoImagem}>
-                                    
+                                <div key={index} style={verificandoEstilo({index, projeto})} className={styles.espacoImagem}>
+
                                     <div onClick={() => trocaInfoProjeto(projeto.nome)} style={{ width: '225px' }}>
                                         <h2 className={styles.tituloProjeto}>{projeto.nome}</h2>
                                     </div>
@@ -133,12 +141,12 @@ export default function Portfolio() {
                             )
                         })}
                     </div>
-                    <div className={styles.botao} style={{marginRight: '10px'}}>
+                    <div className={styles.botao} style={{ marginRight: '10px' }}>
                         <IoIosArrowForward onClick={() => passagemCarrossel('+')} className={styles.iconeBotao} />
                     </div>
                 </div>
             </div>
-            <InfoProjeto projetoNome={trocandoInfoProjeto}/>
+            <InfoProjeto projetoNome={trocandoInfoProjeto} />
         </MoldeContainers>
     )
 }
