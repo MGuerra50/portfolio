@@ -4,7 +4,6 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // import listaProjetos from './listaProjetos.json';
 import { useState } from 'react';
 import MoldeContainers from '../../componentes/MoldeContainers/Index.js';
-// import { url } from 'inspector';
 import imagem1 from '../../componentes/ImagensGamesTeste/1.png';
 import imagem2 from '../../componentes/ImagensGamesTeste/2.png';
 import imagem3 from '../../componentes/ImagensGamesTeste/3.png';
@@ -23,7 +22,7 @@ import imagem12 from './ImagensGamesTeste/12.png';
 interface PropsListaProjetos {
     projeto: {
         nome: string
-        imagem: string
+        imagem: any
     }
     index: number
 }
@@ -114,7 +113,7 @@ export default function Portfolio() {
         setTrocandoInfoProjeto(nomeProjeto);
     }
 
-    function verificandoEstilo({ index, projeto }: PropsListaProjetos) {
+    function verificandoEstilo(projeto: {nome: string, imagem: any}, index:number /*PropsListaProjetos*/) {
         const marginRight = index === 0 ? -posicaoCarrossel : 0;
         const marginLeft = index === 0 ? 7 + 'px' : 0;
         const zIndex = index === 0 && posicaoCarrossel >= (225 * 5) ? -1 : 'auto';
@@ -133,10 +132,9 @@ export default function Portfolio() {
                     </div>
                     <div className={styles.itensCarrossel}>
 
-                        {listaProjetos.map(({ projeto, index }: PropsListaProjetos) => {
-                            // {console.log('nome: '+projeto.nome)}
+                        {listaProjetos.map((projeto: {nome: string, imagem: any}, index:number) => {
                             return (
-                                <div key={index} style={{...verificandoEstilo({index, projeto}), backgroundImage: `url(${projeto.imagem})`}} className={styles.espacoImagem}>
+                                <div key={index} style={{...verificandoEstilo(projeto, index), backgroundImage: `url(${projeto.imagem})`}} className={styles.espacoImagem}>
 
                                     <div onClick={() => trocaInfoProjeto(projeto.nome)} style={{ width: '225px' }}>
                                         <h2 className={styles.tituloProjeto}>{projeto.nome}</h2>
