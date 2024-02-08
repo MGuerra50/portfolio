@@ -1,78 +1,78 @@
 [
     {
         "nome": "Jogo Da Velha",
-        "imagem": "1.png"
+        "imagem": "/projetos/1.png"
     },
     {
         "nome": "Chat",
-        "imagem": "../../componentes/ImagensGamesTeste/2.png"
+        "imagem": "/projetos/2.png"
     }, 
     {
         "nome": "Portfólio",
-        "imagem": "../../componentes/ImagensGamesTeste/3.png"
+        "imagem": "/projetos/3.png"
     }, 
     {
         "nome": "E commerce",
-        "imagem": "../../componentes/ImagensGamesTeste/4.png"
+        "imagem": "/projetos/4.png"
     }, 
     {
         "nome": "Xadrez",
-        "imagem": "../../componentes/ImagensGamesTeste/5.png"
+        "imagem": "/projetos/5.png"
     }, 
     {
         "nome": "Página de Login",
-        "imagem": "../../componentes/ImagensGamesTeste/6.png"
+        "imagem": "/projetos/6.png"
     }, 
     {
         "nome": "Criador de Mapas Mentais",
-        "imagem": "../../componentes/ImagensGamesTeste/7.png"
+        "imagem": "/projetos/7.png"
     }, 
     {
         "nome": "SnowBall",
-        "imagem": "../../componentes/ImagensGamesTeste/8.png"
+        "imagem": "/projetos/8.png"
     }, 
     {
         "nome": "IA",
-        "imagem": "../../componentes/ImagensGamesTeste/9.png"
+        "imagem": "/projetos/9.png"
     }, 
     {
         "nome": "Saas",
-        "imagem": "../../componentes/ImagensGamesTeste/10.png"
+        "imagem": "/projetos/10.png"
     }, 
     {
         "nome": "Criador de Temas WordPress",
-        "imagem": "../../componentes/ImagensGamesTeste/11.png"
+        "imagem": "/projetos/11.png"
     }, 
     {
         "nome": "Página de Captura",
-        "imagem": "../../componentes/ImagensGamesTeste/12.png"
+        "imagem": "/projetos/12.png"
     }, 
     {
         "nome": "Página de Vendas Profissional",
-        "imagem": "../../componentes/ImagensGamesTeste/11.png"
+        "imagem": "/projetos/1.png"
     }, 
     {
         "nome": "SnowBall",
-        "imagem": "../../componentes/ImagensGamesTeste/10.png"
+        "imagem": "/projetos/2.png"
     }, 
     {
         "nome": "IA",
-        "imagem": "../../componentes/ImagensGamesTeste/9.png"
+        "imagem": "/projetos/3.png"
     }, 
     {
         "nome": "Saas",
-        "imagem": "../../componentes/ImagensGamesTeste/8.png"
+        "imagem": "/projetos/4.png"
     }, 
     {
         "nome": "Criador de Temas WordPress",
-        "imagem": "../../componentes/ImagensGamesTeste/7.png"
+        "imagem": "/projetos/5.png"
     }, 
     {
         "nome": "Página de Captura",
-        "imagem": "../../componentes/ImagensGamesTeste/6.png"
+        "imagem": "/projetos/6.png"
     }, 
     {
         "nome": "Página de Captura",
-        "imagem": "../../componentes/ImagensGamesTeste/5.png"
+        "imagem": "/projetos/7.png"
     }
 ]
