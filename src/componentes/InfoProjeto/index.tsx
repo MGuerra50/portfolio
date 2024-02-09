@@ -1,14 +1,11 @@
 import styles from './InfoProjeto.module.css';
-import BotaoPadrao from '../BotaoPadrao/index.js';
-import Slides from '../Slides/index.js';
+import BotaoPadrao from '../BotaoPadrao';
+import Slides from '../Slides';
 import projetos from './projetos.json';
-import { IoLogoGithub } from "react-icons/io";
-import { FaReact } from "react-icons/fa";
-import { IoLogoNodejs } from "react-icons/io5";
+import { IoLogoGithub, IoLogoHtml5 } from "react-icons/io";
+import { FaReact, FaProjectDiagram } from "react-icons/fa";
+import { IoLogoNodejs, IoLogoCss3 } from "react-icons/io5";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaProjectDiagram } from "react-icons/fa";
-import { IoLogoHtml5 } from "react-icons/io";
-import { IoLogoCss3 } from "react-icons/io5";
 import { useState } from 'react';
 
 interface Props {
@@ -25,7 +22,7 @@ interface PropsProjetos {
     imagensProjeto: string | string[];
 }
 
-const InfoProjeto = ({ projetoNome, ativo = false }: Props) => {
+const InfoProjeto = ({ projetoNome }: Props) => {
 
     const conhecimentos = [
         {

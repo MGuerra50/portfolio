@@ -1,7 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Links.module.css';
+import { ReactNode } from 'react';
 
-export default function Links({ children, to, extender, mobile }) {
+interface PropsLinks {
+    children: ReactNode
+    to: string
+    extender?: string
+    mobile?: boolean
+}
+
+export default function Links({ children, to, extender, mobile }: PropsLinks) {
     const localizacao = useLocation();
     return (
         <Link className = {`

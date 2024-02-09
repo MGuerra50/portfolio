@@ -15,6 +15,12 @@
     grid-template-rows: 100px;
 }
 
+.imagemLogo{
+    width: 100%;
+    height: auto;
+    opacity: 100%;
+}
+
 @media (max-width: 1219px) {
     .cabecalho {
         width: 95%;

@@ -1,7 +1,15 @@
 import { useEffect, useState } from 'react';
 import styles from './Slides.module.css';
 
-function verificaEstilo (index, slideAtual){
+interface PropsSlides {
+    imagens: string[]
+    passagemSlides?: number
+    tempo?: number
+    largura?: string
+    altura?: string
+}
+
+function verificaEstilo (index: number, slideAtual: number){
                         
     if(index === 0){
         return {marginRight: - slideAtual + '%'}
@@ -10,7 +18,7 @@ function verificaEstilo (index, slideAtual){
     }
 }
 
-export default function Slides ({ imagens, passagemSlides = 100, tempo = 5, largura = '1220px', altura = '607px' }) {  
+export default function Slides ({ imagens, passagemSlides = 100, tempo = 5, largura = '1220px', altura = '607px' } : PropsSlides) {  
    
     const [slideAtual, setSlideAtual] = useState(0);
     const movimentoMaxSlide = (imagens.length * passagemSlides) - passagemSlides;

@@ -2,7 +2,12 @@ import { Link, useLocation } from 'react-router-dom';
 import styles from './BotaoPadrao.module.css';
 import { useEffect } from 'react';
 
-export default function BotaoPadrao({ texto, to }) {
+interface PropsBotao {
+    texto: string
+    to: string
+}
+
+export default function BotaoPadrao({ texto, to }: PropsBotao) {
     const { pathname } = useLocation();
 
         useEffect(() => {
