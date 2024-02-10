@@ -4,7 +4,7 @@ import logo from './Logo/logo2.png';
 import { Link } from 'react-router-dom';
 import { IoMenu } from "react-icons/io5";
 import { useState } from 'react';
-import MenuPopUp from '../MenuPopUp/index.tsx';
+import MenuPopUp from '../MenuPopUp';
 import ReactDOM from 'react-dom';
 
 

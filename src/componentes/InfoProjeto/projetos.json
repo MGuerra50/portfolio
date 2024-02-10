@@ -5,34 +5,34 @@
         "desenvolvido": 2023,
         "tecnologias": ["React", "NodeJs", "HTML", "CSS"],
         "texto": "O projeto do Jogo da velha para 2 jogadores foi meu primeiro projeto, e consiste em um jogo da velha para duas pessoas jogarem na mesma máquina, onde a jogada entre um e outro é intercalada, um vez é X outra é O, e o número de vitórias é contabilizado para cada jogador. O diferencial desse projeto é utilizar de um design mais sofsticado, como transparência e blur, além de iluminações que vizam transmitir esse ar de sofstificação.",
-        "imagensProjeto": ["/imagensDosProjetos/jogoDaVelha/1.png", "/imagensDosProjetos/jogoDaVelha/2.png", "/imagensDosProjetos/jogoDaVelha/3.png"]
+        "imagensProjeto": ["/imagensDosProjetos/jogoDaVelha/1.png", "/imagensDosProjetos/jogoDaVelha/2.png"]
     }, {
         "nome": "Portfólio",
         "repositorio": "https://github.com/MGuerra50/portfolio",
         "desenvolvido": 2023,
         "tecnologias": ["React", "NodeJs", "PostgreSQL", "MER", "HTML", "CSS"],
         "texto": "O projeto do Portfólio é o meu segundo projeto, meu objetivo com ele foi o de aprimorar minhas habilidades desenvolvendo um sistema que una todos meus conhecimentos em um só, sendo esse adaptável e podendo ser expansível com o tempo, além de fácil manutenção. Ele foi 'desenvolvido' considerando o conceito de SPA, e o maior desafio encontrado no seu desenvolvimento foi o banco de dados, tendo em vista que apesar de ter estudado, nunca aprendi a integrar o banco com o sistema, mas apesar isso, o desenvolvimento desse projeto permitiu a expanção dos meus conhecimentos.",
-        "imagensProjeto": ["/imagensDosProjetos/jogoDaVelha/2.png", "/imagensDosProjetos/jogoDaVelha/3.png", "/imagensDosProjetos/jogoDaVelha/1.png"]
+        "imagensProjeto": ["/imagensDosProjetos/portfolio/2.png", "/imagensDosProjetos/portfolio/3.png", "/imagensDosProjetos/portfolio/1.png"]
     }, {
         "nome": "Chat",
         "repositorio": "https://github.com/MGuerra50/portfolio",
         "desenvolvido": 2023,
         "tecnologias": ["React", "NodeJs", "PostgreSQL", "MER", "HTML", "CSS"],
         "texto": "O projeto do Portfólio é o meu segundo projeto, meu objetivo com ele foi o de aprimorar minhas habilidades desenvolvendo um sistema que una todos meus conhecimentos em um só, sendo esse adaptável e podendo ser expansível com o tempo, além de fácil manutenção. Ele foi 'desenvolvido' considerando o conceito de SPA, e o maior desafio encontrado no seu desenvolvimento foi o banco de dados, tendo em vista que apesar de ter estudado, nunca aprendi a integrar o banco com o sistema, mas apesar isso, o desenvolvimento desse projeto permitiu a expanção dos meus conhecimentos.",
-        "imagensProjeto": ["/imagensDosProjetos/jogoDaVelha/3.png", "/imagensDosProjetos/jogoDaVelha/2.png", "/imagensDosProjetos/jogoDaVelha/3.png"]
+        "imagensProjeto": ["/imagensDosProjetos/portfolio/3.png", "/imagensDosProjetos/portfolio/2.png", "/imagensDosProjetos/portfolio/3.png"]
     }, {
         "nome": "E commerce",
         "repositorio": "https://github.com/MGuerra50/portfolio",
         "desenvolvido": 2023,
         "tecnologias": ["React", "NodeJs", "PostgreSQL", "MER", "HTML", "CSS"],
         "texto": "O projeto do Portfólio é o meu segundo projeto, meu objetivo com ele foi o de aprimorar minhas habilidades desenvolvendo um sistema que una todos meus conhecimentos em um só, sendo esse adaptável e podendo ser expansível com o tempo, além de fácil manutenção. Ele foi 'desenvolvido' considerando o conceito de SPA, e o maior desafio encontrado no seu desenvolvimento foi o banco de dados, tendo em vista que apesar de ter estudado, nunca aprendi a integrar o banco com o sistema, mas apesar isso, o desenvolvimento desse projeto permitiu a expanção dos meus conhecimentos.",
-        "imagensProjeto": ["/imagensDosProjetos/jogoDaVelha/1.png", "/imagensDosProjetos/jogoDaVelha/1.png", "/imagensDosProjetos/jogoDaVelha/3.png"]
+        "imagensProjeto": ["/imagensDosProjetos/portfolio/1.png", "/imagensDosProjetos/portfolio/1.png", "/imagensDosProjetos/portfolio/3.png"]
     }, {
         "nome": "Xadrez",
         "repositorio": "https://github.com/MGuerra50/portfolio",
         "desenvolvido": 2023,
         "tecnologias": ["React", "NodeJs", "PostgreSQL", "MER", "HTML", "CSS"],
         "texto": "O projeto do Portfólio é o meu segundo projeto, meu objetivo com ele foi o de aprimorar minhas habilidades desenvolvendo um sistema que una todos meus conhecimentos em um só, sendo esse adaptável e podendo ser expansível com o tempo, além de fácil manutenção. Ele foi 'desenvolvido' considerando o conceito de SPA, e o maior desafio encontrado no seu desenvolvimento foi o banco de dados, tendo em vista que apesar de ter estudado, nunca aprendi a integrar o banco com o sistema, mas apesar isso, o desenvolvimento desse projeto permitiu a expanção dos meus conhecimentos.",
-        "imagensProjeto": ["/imagensDosProjetos/jogoDaVelha/2.png", "/imagensDosProjetos/jogoDaVelha/3.png", "/imagensDosProjetos/jogoDaVelha/2.png"]
+        "imagensProjeto": ["/imagensDosProjetos/portfolio/2.png", "/imagensDosProjetos/portfolio/3.png", "/imagensDosProjetos/portfolio/2.png"]
     }
 ]
