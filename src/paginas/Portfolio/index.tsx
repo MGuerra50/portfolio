@@ -3,7 +3,7 @@ import styles from './Portfolio.module.css';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import listaProjetos from './listaProjetos.json';
 import { useState } from 'react';
-import MoldeContainers from '../../componentes/MoldeContainers/Index.js';
+import MoldeContainers from '../../componentes/MoldeContainers/Index';
 
 interface PropsProjetos {
     nome: string
