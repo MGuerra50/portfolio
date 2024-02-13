@@ -4,75 +4,11 @@
         "imagem": "/projetos/1.png"
     },
     {
-        "nome": "Chat",
-        "imagem": "/projetos/2.png"
-    }, 
-    {
         "nome": "Portfólio",
-        "imagem": "/projetos/3.png"
-    }, 
-    {
-        "nome": "E commerce",
-        "imagem": "/projetos/4.png"
-    }, 
-    {
-        "nome": "Xadrez",
-        "imagem": "/projetos/5.png"
-    }, 
-    {
-        "nome": "Página de Login",
-        "imagem": "/projetos/6.png"
-    }, 
-    {
-        "nome": "Criador de Mapas Mentais",
-        "imagem": "/projetos/7.png"
-    }, 
-    {
-        "nome": "SnowBall",
-        "imagem": "/projetos/8.png"
-    }, 
-    {
-        "nome": "IA",
-        "imagem": "/projetos/9.png"
-    }, 
-    {
-        "nome": "Saas",
-        "imagem": "/projetos/10.png"
-    }, 
-    {
-        "nome": "Criador de Temas WordPress",
-        "imagem": "/projetos/11.png"
-    }, 
-    {
-        "nome": "Página de Captura",
-        "imagem": "/projetos/12.png"
-    }, 
-    {
-        "nome": "Página de Vendas Profissional",
-        "imagem": "/projetos/1.png"
-    }, 
-    {
-        "nome": "SnowBall",
         "imagem": "/projetos/2.png"
     }, 
     {
-        "nome": "IA",
+        "nome": "Clone Netflix",
         "imagem": "/projetos/3.png"
-    }, 
-    {
-        "nome": "Saas",
-        "imagem": "/projetos/4.png"
-    }, 
-    {
-        "nome": "Criador de Temas WordPress",
-        "imagem": "/projetos/5.png"
-    }, 
-    {
-        "nome": "Página de Captura",
-        "imagem": "/projetos/6.png"
-    }, 
-    {
-        "nome": "Página de Captura",
-        "imagem": "/projetos/7.png"
     }
 ]

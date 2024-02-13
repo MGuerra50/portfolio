@@ -1,8 +1,6 @@
 import Slides from '../../componentes/Slides';
 import styles from './Inicial.module.css';
-import imagem1 from '../../imagensTeste/1.png';
-import imagem2 from '../../imagensTeste/2.png';
-import imagem3 from '../../imagensTeste/3.png';
+import slidesDestaques from './destaques.json';
 import Resumo from '../../componentes/Resumo';
 import BotaoPadrao from '../../componentes/BotaoPadrao';
 import Certificacoes from '../../componentes/Certificacoes';
@@ -10,14 +8,13 @@ import MoldeContainers from '../../componentes/MoldeContainers/Index';
 
 export default function Inicial() {
 
-    const testeSlide = [imagem1, imagem2, imagem3];
     const conhecimentos = ['React', 'NodeJs', 'PostgreSQL', 'MER', 'HTML', 'CSS'];
 
     return (
         <MoldeContainers>
             <div className={styles.slideShow}>
                 <div className={styles.slidePaginaInicial}>
-                    <Slides imagens={testeSlide}/>
+                    <Slides imagens={slidesDestaques}/>
                 </div>
 
                 <div className={styles.backgroundSlide}>
