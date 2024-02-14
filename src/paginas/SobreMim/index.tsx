@@ -7,12 +7,18 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { FaProjectDiagram } from "react-icons/fa";
 import { IoLogoHtml5 } from "react-icons/io";
 import { IoLogoCss3 } from "react-icons/io5";
+import { BiLogoTypescript } from "react-icons/bi";
 import MoldeContainers from '../../componentes/MoldeContainers/Index';
 
 export default function SobreMim() {
 
     const conhecimentos = [
         {
+            nome: 'Typescript',
+            valor: 55,
+            cor: '#2F74C0',
+            icon: <BiLogoTypescript style={{ color: '#2F74C0' }} className={styles.icones} />
+        },{
             nome: 'React',
             valor: 90,
             cor: '#5ED3F3',

@@ -5,7 +5,7 @@ import projetos from './projetos.json';
 import { IoLogoGithub, IoLogoHtml5 } from "react-icons/io";
 import { FaReact, FaProjectDiagram } from "react-icons/fa";
 import { IoLogoNodejs, IoLogoCss3 } from "react-icons/io5";
-import { BiLogoPostgresql } from "react-icons/bi";
+import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import { useState } from 'react';
 
 interface Props {
@@ -26,6 +26,10 @@ const InfoProjeto = ({ projetoNome }: Props) => {
 
     const conhecimentos = [
         {
+            nome: 'Typescript',
+            cor: '#2F74C0',
+            icon: <BiLogoTypescript style={{ color: '#2F74C0' }} className={styles.icones} />
+        },{
             nome: 'React',
             cor: '#5ED3F3',
             icon: <FaReact style={{ color: '#5ED3F3' }} className={styles.icones} />

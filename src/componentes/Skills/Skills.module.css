@@ -71,6 +71,7 @@
     width: 100%;
     height: auto;
     margin-top: 12%;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     transition: 0.5s;

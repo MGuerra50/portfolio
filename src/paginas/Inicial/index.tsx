@@ -8,7 +8,7 @@ import MoldeContainers from '../../componentes/MoldeContainers/Index';
 
 export default function Inicial() {
 
-    const conhecimentos = ['React', 'NodeJs', 'PostgreSQL', 'MER', 'HTML', 'CSS'];
+    const conhecimentos = ['Typescript', 'React', 'NodeJs', 'PostgreSQL', 'MER', 'HTML', 'CSS'];
 
     return (
         <MoldeContainers>
