@@ -35,7 +35,7 @@ export default function Skills({ conhecimentos }: PropsSkills) {
                     pontualidade, a transparência, e a clareza como valores fundamentais no ambiente de trabalho.
                 </li>
                 <li className={styles.lista}>
-                    Possuo facilidade natural para ensinar colegas de equipe, posto isso, reconheço a fundamentalidade de
+                    Possuo facilidade natural para ensinar colegas de equipe, diante disso, reconheço a fundamentalidade de
                     compartilhar conhecimento em uma equipe para alcançar o sucesso.
                 </li>
             </div>
